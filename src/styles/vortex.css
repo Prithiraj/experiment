@@ -1,0 +1,1 @@
+html[data-motion="full"] .scene--vortex{contain:paint}.vortex-core,.vortex-actor{will-change:transform,opacity}html[data-motion="reduced"] .vortex-stage{opacity:.72}html[data-motion="reduced"] .vortex-core{box-shadow:0 0 70px rgba(255,249,241,.28)}
