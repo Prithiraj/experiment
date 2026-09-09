@@ -1,4 +1,5 @@
 import { initReleaseHero } from './hero';
+import { initOrbitGallery } from './orbit';
 import { bindMotionPreference, type MotionProfile } from './runtime';
 import { initZeroGField } from './zero-g';
 
@@ -19,6 +20,7 @@ export function initMotionSystem(): Cleanup {
     sceneCleanups = [
       initReleaseHero(),
       initZeroGField(),
+      initOrbitGallery(),
     ];
   };
 
