@@ -1,4 +1,5 @@
 export type MotionProfile = 'full' | 'reduced';
+export type LayoutBand = 'mobile' | 'tablet' | 'desktop';
 
 interface NavigatorWithConnection extends Navigator {
   connection?: { saveData?: boolean };
@@ -10,8 +11,15 @@ export function currentMotionProfile(): MotionProfile {
   return reducedQuery.matches ? 'reduced' : 'full';
 }
 
+export function currentLayoutBand(): LayoutBand {
+  if (window.matchMedia('(max-width: 640px)').matches) return 'mobile';
+  if (window.matchMedia('(max-width: 980px)').matches) return 'tablet';
+  return 'desktop';
+}
+
 export function actorBudget(): number {
-  let budget = window.innerWidth < 640 ? 8 : window.innerWidth < 980 ? 14 : 24;
+  const layout = currentLayoutBand();
+  let budget = layout === 'mobile' ? 8 : layout === 'tablet' ? 14 : 24;
   const cores = navigator.hardwareConcurrency || 8;
   const saveData = (navigator as NavigatorWithConnection).connection?.saveData === true;
 
@@ -20,16 +28,38 @@ export function actorBudget(): number {
   return budget;
 }
 
-export function bindMotionPreference(onChange?: (profile: MotionProfile) => void): () => void {
+export function bindMotionEnvironment(onChange?: (profile: MotionProfile) => void): () => void {
+  let previousKey = '';
+  let frame: number | undefined;
+
   const apply = () => {
+    frame = undefined;
     const profile = currentMotionProfile();
+    const layout = currentLayoutBand();
+    const key = `${profile}:${layout}`;
+
     document.documentElement.dataset.motion = profile;
+    document.documentElement.dataset.layout = layout;
+
+    if (key === previousKey) return;
+    previousKey = key;
     onChange?.(profile);
   };
 
+  const scheduleApply = () => {
+    if (frame !== undefined) return;
+    frame = window.requestAnimationFrame(apply);
+  };
+
   apply();
-  reducedQuery.addEventListener('change', apply);
-  return () => reducedQuery.removeEventListener('change', apply);
+  reducedQuery.addEventListener('change', scheduleApply);
+  window.addEventListener('resize', scheduleApply, { passive: true });
+
+  return () => {
+    if (frame !== undefined) window.cancelAnimationFrame(frame);
+    reducedQuery.removeEventListener('change', scheduleApply);
+    window.removeEventListener('resize', scheduleApply);
+  };
 }
 
 export function clamp(value: number, min = 0, max = 1): number {
