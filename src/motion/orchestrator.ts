@@ -7,6 +7,16 @@ import { initVortex } from './vortex';
 import { initZeroGField } from './zero-g';
 
 type Cleanup = () => void;
+type SceneFactory = { name: string; init: () => Cleanup };
+
+const scenes: SceneFactory[] = [
+  { name: 'release', init: initReleaseHero },
+  { name: 'field', init: initZeroGField },
+  { name: 'orbit', init: initOrbitGallery },
+  { name: 'horizontal', init: initHorizontalWorld },
+  { name: 'vortex', init: initVortex },
+  { name: 'return', init: initGravityReturn },
+];
 
 export function initMotionSystem(): Cleanup {
   let sceneCleanups: Cleanup[] = [];
@@ -18,16 +28,17 @@ export function initMotionSystem(): Cleanup {
 
   const mountScenes = (profile: MotionProfile) => {
     clearScenes();
+    document.documentElement.dataset.motionState = profile === 'reduced' ? 'static' : 'mounting';
     if (profile === 'reduced') return;
 
-    sceneCleanups = [
-      initReleaseHero(),
-      initZeroGField(),
-      initOrbitGallery(),
-      initHorizontalWorld(),
-      initVortex(),
-      initGravityReturn(),
-    ];
+    try {
+      sceneCleanups = scenes.map(({ init }) => init());
+      document.documentElement.dataset.motionState = 'ready';
+    } catch (error) {
+      console.error('[Zero-G Bloom] Motion initialization failed; using static fallback.', error);
+      clearScenes();
+      document.documentElement.dataset.motionState = 'fallback';
+    }
   };
 
   const unbindPreference = bindMotionPreference(mountScenes);
