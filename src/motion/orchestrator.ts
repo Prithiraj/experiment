@@ -1,6 +1,7 @@
 import { initReleaseHero } from './hero';
 import { initHorizontalWorld } from './horizontal';
 import { initOrbitGallery } from './orbit';
+import { initGravityReturn } from './return';
 import { bindMotionPreference, type MotionProfile } from './runtime';
 import { initVortex } from './vortex';
 import { initZeroGField } from './zero-g';
@@ -25,6 +26,7 @@ export function initMotionSystem(): Cleanup {
       initOrbitGallery(),
       initHorizontalWorld(),
       initVortex(),
+      initGravityReturn(),
     ];
   };
 

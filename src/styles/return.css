@@ -1,0 +1,1 @@
+html[data-motion="full"] .return-stem,html[data-motion="full"] .return-bloom,html[data-motion="full"] .shop-card{will-change:transform,opacity}html[data-motion="reduced"] .return-stem,html[data-motion="reduced"] .return-bloom,html[data-motion="reduced"] .shop-card{transform:none!important;opacity:1!important}
