@@ -1,14 +1,9 @@
 import './styles/main.css';
 import './styles/motion.css';
-import { initReleaseHero } from './motion/hero';
-import { bindMotionPreference } from './motion/runtime';
+import './styles/zero-g.css';
+import { initMotionSystem } from './motion/orchestrator';
 
-let releaseCleanup: () => void = () => undefined;
-const cleanupMotionPreference = bindMotionPreference((profile) => {
-  releaseCleanup();
-  releaseCleanup = profile === 'full' ? initReleaseHero() : () => undefined;
-});
-
+const cleanupMotionSystem = initMotionSystem();
 let cartCount = 0;
 let toastTimer: number | undefined;
 
@@ -33,7 +28,4 @@ document.querySelectorAll<HTMLButtonElement>('[data-add-to-cart]').forEach((butt
   });
 });
 
-window.addEventListener('pagehide', () => {
-  releaseCleanup();
-  cleanupMotionPreference();
-}, { once: true });
+window.addEventListener('pagehide', cleanupMotionSystem, { once: true });

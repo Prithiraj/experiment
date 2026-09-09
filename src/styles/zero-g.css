@@ -1,0 +1,1 @@
+html[data-motion="full"] .scene--field{contain:paint}.scene--field [data-zero-actor]{transform-style:preserve-3d;will-change:transform,opacity}.scene--field [hidden]{display:none!important}html[data-motion="reduced"] .field-stage{position:relative;min-height:520px;margin-top:50px}html[data-motion="reduced"] .field-word{opacity:.55}
