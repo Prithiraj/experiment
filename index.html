@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#fff9f1" />
+    <meta name="color-scheme" content="light" />
     <meta name="description" content="Zero-G Bloom — an experimental antigravity florist storefront." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <title>Zero-G Bloom — Flowers that defy gravity</title>
   </head>
   <body>
@@ -20,10 +23,17 @@
         <a href="#story">Our world</a>
         <a href="#shop">Shop</a>
       </nav>
-      <button class="bag-button" type="button" data-cart-button aria-label="Shopping bag, 0 items">
+      <button class="bag-button" type="button" data-cart-button aria-label="Shopping bag, 0 items" aria-haspopup="dialog" aria-controls="cart-dialog">
         Bag <span data-cart-count>0</span>
       </button>
     </header>
+
+    <div class="gravity-hud" data-gravity-hud aria-hidden="true">
+      <span class="gravity-hud__kicker">Gravity</span>
+      <strong class="gravity-hud__value" data-gravity-value>1.00g</strong>
+      <span class="gravity-hud__track"><i class="gravity-hud__meter" data-gravity-meter></i></span>
+      <span class="gravity-hud__scene" data-gravity-scene>01 / EARTH</span>
+    </div>
 
     <main id="top">
       <section class="hero scene scene--hero" data-scene="release" aria-labelledby="hero-title">
@@ -183,6 +193,27 @@
       <div class="footer-links"><a href="#shop">Shop</a><a href="#collection">Collection</a><a href="#story">Our world</a><a href="mailto:hello@example.com">Contact</a></div>
       <p class="footer-note">© <span data-year></span> Zero-G Bloom. Prototype storefront.</p>
     </footer>
+
+    <dialog id="cart-dialog" class="cart-drawer" data-cart-dialog aria-labelledby="cart-title">
+      <div class="cart-drawer__shell">
+        <header class="cart-drawer__header">
+          <div><p class="eyebrow">Your orbit</p><h2 id="cart-title">Flower bag</h2></div>
+          <button class="cart-drawer__close" type="button" data-cart-close aria-label="Close shopping bag">×</button>
+        </header>
+        <div class="cart-drawer__body">
+          <p class="cart-empty" data-cart-empty>Your bag is weightless for now. Add a bouquet and it will land here.</p>
+          <ul class="cart-lines" data-cart-items hidden></ul>
+        </div>
+        <footer class="cart-drawer__footer">
+          <div class="cart-total"><span>Prototype total</span><strong data-cart-total>$0</strong></div>
+          <div class="cart-actions">
+            <button type="button" data-cart-clear disabled>Clear bag</button>
+            <a href="#shop" data-cart-continue>Keep browsing</a>
+          </div>
+          <p class="cart-prototype-note">Checkout is intentionally not connected in this front-end prototype.</p>
+        </footer>
+      </div>
+    </dialog>
 
     <div class="cart-toast" role="status" aria-live="polite" data-cart-toast>Added to your orbit.</div>
     <script type="module" src="/src/main.ts"></script>
