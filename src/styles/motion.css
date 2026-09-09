@@ -1,0 +1,3 @@
+.hero-glyph{display:inline-block;white-space:pre;transform-origin:50% 70%}.hero [data-release-actor]{transform-style:preserve-3d}.hero-bouquet{will-change:transform}.hero-backdrop{will-change:transform}
+
+html[data-motion="full"] .scene--hero{contain:paint}html[data-motion="reduced"] .hero-glyph{transform:none!important}html[data-motion="reduced"] .hero-bouquet{transform:none!important}
