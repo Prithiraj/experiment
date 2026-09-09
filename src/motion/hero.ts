@@ -3,17 +3,18 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-function splitHeroGlyphs(line: HTMLElement): HTMLElement[] {
-  if (line.dataset.split === 'true') {
-    return Array.from(line.querySelectorAll<HTMLElement>('.hero-glyph'));
-  }
+interface GlyphSplit {
+  glyphs: HTMLElement[];
+  restore: () => void;
+}
 
-  const text = line.textContent ?? '';
+function splitHeroGlyphs(line: HTMLElement): GlyphSplit {
+  const originalText = line.textContent ?? '';
   line.textContent = '';
   line.dataset.split = 'true';
   line.setAttribute('aria-hidden', 'true');
 
-  return Array.from(text).map((character, index) => {
+  const glyphs = Array.from(originalText).map((character, index) => {
     const glyph = document.createElement('span');
     glyph.className = 'hero-glyph';
     glyph.dataset.glyphIndex = String(index);
@@ -21,6 +22,15 @@ function splitHeroGlyphs(line: HTMLElement): HTMLElement[] {
     line.append(glyph);
     return glyph;
   });
+
+  return {
+    glyphs,
+    restore: () => {
+      line.textContent = originalText;
+      delete line.dataset.split;
+      line.removeAttribute('aria-hidden');
+    },
+  };
 }
 
 export function initReleaseHero(): () => void {
@@ -30,7 +40,8 @@ export function initReleaseHero(): () => void {
   const bouquet = hero.querySelector<HTMLElement>('[data-bouquet]');
   const actors = gsap.utils.toArray<HTMLElement>('[data-release-actor]', hero);
   const accentLine = hero.querySelector<HTMLElement>('.hero-line--accent');
-  const glyphs = accentLine ? splitHeroGlyphs(accentLine) : [];
+  const split = accentLine ? splitHeroGlyphs(accentLine) : null;
+  const glyphs = split?.glyphs ?? [];
 
   const context = gsap.context(() => {
     gsap.set([...actors, ...glyphs], { willChange: 'transform' });
@@ -102,5 +113,6 @@ export function initReleaseHero(): () => void {
     hero.removeEventListener('pointermove', onPointerMove);
     hero.removeEventListener('pointerleave', onPointerLeave);
     context.revert();
+    split?.restore();
   };
 }
