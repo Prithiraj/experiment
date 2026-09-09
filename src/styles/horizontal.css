@@ -1,0 +1,2 @@
+@media (min-width:641px){html[data-motion="full"] .scene--axis{contain:paint}html[data-motion="full"] .axis-track{will-change:transform}html[data-motion="full"] .axis-flower{will-change:transform}}
+html[data-motion="reduced"] .axis{min-height:auto}html[data-motion="reduced"] .axis-track{display:block;width:100%;transform:none}html[data-motion="reduced"] .axis-panel{width:100%;min-height:68svh;transform:none}

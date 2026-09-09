@@ -2,6 +2,7 @@ import './styles/main.css';
 import './styles/motion.css';
 import './styles/zero-g.css';
 import './styles/orbit.css';
+import './styles/horizontal.css';
 import { initMotionSystem } from './motion/orchestrator';
 
 const cleanupMotionSystem = initMotionSystem();
