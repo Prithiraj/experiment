@@ -1,5 +1,6 @@
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import { currentLayoutBand } from './runtime';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -11,7 +12,7 @@ export function initHorizontalWorld(): () => void {
   const panels = gsap.utils.toArray<HTMLElement>('.axis-panel', track);
   const flowers = gsap.utils.toArray<HTMLElement>('.axis-flower', track);
 
-  if (window.innerWidth < 640) {
+  if (currentLayoutBand() === 'mobile') {
     const context = gsap.context(() => {
       panels.forEach((panel) => {
         gsap.from(panel.querySelectorAll('b, strong, span'), {
