@@ -30,7 +30,7 @@ export function initGravityTelemetry(): Cleanup {
   const apply = (reading: GravityReading) => {
     sceneNode.textContent = reading.scene;
     valueNode.textContent = reading.value;
-    meterNode.style.setProperty('--gravity-level', String(Math.max(0.035, reading.meter)));
+    meterNode.style.width = `${Math.max(3.5, reading.meter * 100)}%`;
     hud.dataset.scene = reading.scene.split('/')[0]?.trim() ?? '';
   };
 
