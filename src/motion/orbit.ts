@@ -85,19 +85,29 @@ export function initOrbitGallery(): () => void {
     });
   }, scene);
 
+  const clearSettledCard = (card: HTMLElement) => {
+    const timer = settleTimers.get(card);
+    if (timer !== undefined) window.clearTimeout(timer);
+    settleTimers.delete(card);
+    card.classList.remove('is-settled');
+  };
+
   const settle = (card: HTMLElement, index: number) => {
-    const previousTimer = settleTimers.get(card);
-    if (previousTimer) window.clearTimeout(previousTimer);
+    const previousIndex = state.settledIndex;
+    if (previousIndex !== null && previousIndex !== index) {
+      const previousCard = cards[previousIndex];
+      if (previousCard) clearSettledCard(previousCard);
+    }
+    clearSettledCard(card);
 
     state.settledIndex = index;
     card.classList.add('is-settled');
     renderOrbit(cards, state);
 
     const timer = window.setTimeout(() => {
-      card.classList.remove('is-settled');
+      clearSettledCard(card);
       if (state.settledIndex === index) state.settledIndex = null;
       renderOrbit(cards, state);
-      settleTimers.delete(card);
     }, 950);
     settleTimers.set(card, timer);
   };
@@ -115,6 +125,7 @@ export function initOrbitGallery(): () => void {
 
   return () => {
     settleTimers.forEach((timer) => window.clearTimeout(timer));
+    settleTimers.clear();
     handlers.forEach(({ card, button, onClick, onFocus, onBlur }) => {
       button?.removeEventListener('click', onClick);
       card.removeEventListener('focusin', onFocus);
