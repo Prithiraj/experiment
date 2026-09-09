@@ -1,8 +1,17 @@
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import { attractionVector, rectCenter } from './gravity';
+import { attractionVector, type Point } from './gravity';
 
 gsap.registerPlugin(ScrollTrigger);
+
+function cssPosition(element: HTMLElement, centeredByTransform: boolean): Point {
+  const style = window.getComputedStyle(element);
+  const left = Number.parseFloat(style.left) || element.offsetLeft;
+  const top = Number.parseFloat(style.top) || element.offsetTop;
+
+  if (centeredByTransform) return { x: left, y: top };
+  return { x: left + element.offsetWidth / 2, y: top + element.offsetHeight / 2 };
+}
 
 export function initVortex(): () => void {
   const scene = document.querySelector<HTMLElement>('[data-scene="vortex"]');
@@ -11,6 +20,12 @@ export function initVortex(): () => void {
   if (!scene || !stage || !core) return () => undefined;
 
   const actors = gsap.utils.toArray<HTMLElement>('[data-vortex-actor]', stage);
+  const vectorFor = (actor: HTMLElement) => {
+    const actorPoint = cssPosition(actor, actor.classList.contains('bloom'));
+    const corePoint = cssPosition(core, true);
+    return attractionVector(actorPoint, corePoint);
+  };
+
   const context = gsap.context(() => {
     const timeline = gsap.timeline({
       scrollTrigger: {
@@ -30,23 +45,20 @@ export function initVortex(): () => void {
       .to(core, { scale: 1.35, rotation: 35, boxShadow: '0 0 150px rgba(255,249,241,.7)', duration: 0.58, ease: 'power2.in' }, 0.08);
 
     actors.forEach((actor, index) => {
-      const origin = rectCenter(actor.getBoundingClientRect());
-      const target = rectCenter(core.getBoundingClientRect());
-      const vector = attractionVector(origin, target);
       const direction = index % 2 === 0 ? 1 : -1;
 
       timeline
         .to(actor, {
-          x: vector.x * 0.28,
-          y: vector.y * 0.28,
+          x: () => vectorFor(actor).x * 0.28,
+          y: () => vectorFor(actor).y * 0.28,
           rotation: `+=${direction * 28}`,
           scale: 0.92,
           duration: 0.34,
           ease: 'power1.in',
         }, 0.12 + index * 0.018)
         .to(actor, {
-          x: vector.x,
-          y: vector.y,
+          x: () => vectorFor(actor).x,
+          y: () => vectorFor(actor).y,
           rotation: `+=${direction * 150}`,
           scale: 0.08,
           opacity: 0,
