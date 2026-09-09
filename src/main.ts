@@ -34,4 +34,14 @@ document.querySelectorAll<HTMLButtonElement>('[data-add-to-cart]').forEach((butt
   });
 });
 
-window.addEventListener('pagehide', cleanupMotionSystem, { once: true });
+const onPageHide = (event: PageTransitionEvent) => {
+  if (!event.persisted) cleanupMotionSystem();
+};
+
+const onPageShow = (event: PageTransitionEvent) => {
+  if (!event.persisted) return;
+  window.requestAnimationFrame(() => window.dispatchEvent(new Event('resize')));
+};
+
+window.addEventListener('pagehide', onPageHide);
+window.addEventListener('pageshow', onPageShow);
