@@ -1,6 +1,6 @@
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import { lerp } from './runtime';
+import { currentLayoutBand, lerp } from './runtime';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -11,7 +11,7 @@ interface OrbitState {
 
 function renderOrbit(cards: HTMLElement[], state: OrbitState): void {
   const count = cards.length;
-  const compact = window.innerWidth < 980;
+  const compact = currentLayoutBand() !== 'desktop';
   const radiusX = Math.min(window.innerWidth * (compact ? 0.33 : 0.38), compact ? 320 : 470);
   const radiusY = Math.min(window.innerHeight * (compact ? 0.18 : 0.24), compact ? 150 : 220);
 
@@ -47,7 +47,7 @@ export function initOrbitGallery(): () => void {
   const cards = gsap.utils.toArray<HTMLElement>('[data-orbit-card]', stage);
   if (cards.length === 0) return () => undefined;
 
-  if (window.innerWidth < 640) {
+  if (currentLayoutBand() === 'mobile') {
     const context = gsap.context(() => {
       gsap.from(cards, {
         y: 34,
