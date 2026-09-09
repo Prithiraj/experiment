@@ -1,5 +1,9 @@
 export type MotionProfile = 'full' | 'reduced';
 
+interface NavigatorWithConnection extends Navigator {
+  connection?: { saveData?: boolean };
+}
+
 const reducedQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 
 export function currentMotionProfile(): MotionProfile {
@@ -7,9 +11,13 @@ export function currentMotionProfile(): MotionProfile {
 }
 
 export function actorBudget(): number {
-  if (window.innerWidth < 640) return 8;
-  if (window.innerWidth < 980) return 14;
-  return 24;
+  let budget = window.innerWidth < 640 ? 8 : window.innerWidth < 980 ? 14 : 24;
+  const cores = navigator.hardwareConcurrency || 8;
+  const saveData = (navigator as NavigatorWithConnection).connection?.saveData === true;
+
+  if (cores <= 4) budget = Math.min(budget, 10);
+  if (saveData) budget = Math.min(budget, 8);
+  return budget;
 }
 
 export function bindMotionPreference(onChange?: (profile: MotionProfile) => void): () => void {

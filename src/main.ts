@@ -5,6 +5,7 @@ import './styles/orbit.css';
 import './styles/horizontal.css';
 import './styles/vortex.css';
 import './styles/return.css';
+import './styles/performance.css';
 import { initMotionSystem } from './motion/orchestrator';
 
 const cleanupMotionSystem = initMotionSystem();

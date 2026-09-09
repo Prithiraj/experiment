@@ -1,0 +1,5 @@
+.services,.seasonal,.testimonials,.site-footer{content-visibility:auto;contain-intrinsic-size:900px}.button,.bag-button,.product-meta button{touch-action:manipulation}
+@media (max-width:640px){.site-header{backdrop-filter:none;background:rgba(255,249,241,.96)}}
+@media (prefers-contrast:more){.product-card,.shop-card,.quote-grid blockquote{border-width:2px;border-color:currentColor}.button--ghost{border-width:2px;border-color:currentColor}.site-header{border-color:var(--ink-950)}}
+@media (forced-colors:active){.button,.bag-button,.product-meta button{border:1px solid ButtonText}.brand-mark{border:1px solid currentColor}.vortex-core{border:2px solid currentColor}}
+@media (prefers-reduced-motion:reduce){.scroll-cue{display:none}.hero-bouquet,.field-stage,.vortex-stage{will-change:auto!important}}
