@@ -42,6 +42,7 @@ The final shop is intentionally stable and conventional.
 - [`docs/phase-8-audit.md`](./docs/phase-8-audit.md) — accessibility, responsive, performance, and CI audit
 - [`docs/phase-9-launch.md`](./docs/phase-9-launch.md) — launch checklist, fallback behavior, and remaining production work
 - [`docs/asset-integration.md`](./docs/asset-integration.md) — recovered archive provenance and current production image integration
+- [`docs/production-image-completion-plan.md`](./docs/production-image-completion-plan.md) — proposed source classification, conversion pipeline, loading strategy, acceptance gates, and deployment sequence
 
 ## Accessibility contract
 

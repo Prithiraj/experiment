@@ -19,3 +19,5 @@ The archive boards, contact sheets, macro studies, and the broad homepage concep
 ## Remaining production work
 
 This is the first production asset pass, not a claim that all final photography is complete. The next visual pass can add dedicated macro, petal-stack, ripple, and campaign assets after real-device performance profiling. Commerce data and checkout remain outside this front-end prototype.
+
+The reviewed execution sequence and completion criteria are defined in [`production-image-completion-plan.md`](./production-image-completion-plan.md). No additional archive conversion should begin until that plan is approved.
