@@ -54,7 +54,7 @@ S06 Verification and release
 
 ## Current checkpoint
 
-See [the tracker](./01-implementation-tracker.md) for the only authoritative slice status. The four-state lotus sequence is verified, structural layers are deliberately deferred, and `S03.3a` is the active slice.
+See [the tracker](./01-implementation-tracker.md) for the only authoritative slice status. `S00` through `S03` are verified; `S04.1` is the active manifest slice.
 
 ## Files
 

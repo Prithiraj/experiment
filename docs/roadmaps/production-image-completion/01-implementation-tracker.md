@@ -16,10 +16,10 @@ Statuses: `READY`, `IN PROGRESS`, `BLOCKED`, `VERIFIED`, `DEFERRED`.
 | `S03.1b` | Half-open lotus cutout | `S03.1a` | Medium | VERIFIED | `evidence/S03.1b-half-open.md` |
 | `S03.2a` | Stem and sepals layers | `S03.1` | Medium | DEFERRED | `evidence/S03.2-structural-deferment.md` |
 | `S03.2b` | Approved inner-structure layers | `S03.2a` | Medium | DEFERRED | `evidence/S03.2-structural-deferment.md` |
-| `S03.3a` | Reflection plate | `S02.3` | Medium | IN PROGRESS | `evidence/S03.3a-reflection.md` |
-| `S03.3b` | Ripple plus minimal atmosphere overlays | `S03.3a` | Medium | READY | `evidence/S03.3b-overlays.md` |
-| `S03.4` | Distinct depth leaves/petals or deferment | `S01.3` | Medium | READY | `evidence/S03.4-depth-assets.md` |
-| `S04.1` | Extended manifest | `S02`, approved `S03` children | Medium | READY | `evidence/S04.1-manifest.md` |
+| `S03.3a` | Reflection plate | `S02.3` | Medium | VERIFIED | `evidence/S03.3a-reflection.md` |
+| `S03.3b` | Ripple plus minimal atmosphere overlays | `S03.3a` | Medium | VERIFIED | `evidence/S03.3b-overlays.md` |
+| `S03.4` | Distinct depth leaves/petals or deferment | `S01.3` | Medium | DEFERRED | `evidence/S03.4-depth-assets.md` |
+| `S04.1` | Extended manifest | `S02`, approved `S03` children | Medium | IN PROGRESS | `evidence/S04.1-manifest.md` |
 | `S04.2` | Repeatable verifier | `S04.1` | Medium | READY | `evidence/S04.2-verifier.md` |
 | `S04.3` | Import/orphan/reference guards | `S04.2` | Medium | READY | `evidence/S04.3-guards.md` |
 | `S05.1` | Priority/deferred loading behavior | `S04` | High | READY | `evidence/S05.1-loading.md` |
@@ -37,7 +37,7 @@ Statuses: `READY`, `IN PROGRESS`, `BLOCKED`, `VERIFIED`, `DEFERRED`.
 | `S00` | `S00.1` and `S00.2` verified | VERIFIED |
 | `S01` | `S01.1`–`S01.3` verified | VERIFIED |
 | `S02` | `S02.1`–`S02.3` verified | VERIFIED |
-| `S03` | All required `S03.*` verified or explicitly deferred | IN PROGRESS |
-| `S04` | `S04.1`–`S04.3` verified | READY |
+| `S03` | All required `S03.*` verified or explicitly deferred | VERIFIED |
+| `S04` | `S04.1`–`S04.3` verified | IN PROGRESS |
 | `S05` | `S05.1`–`S05.4` verified | READY |
 | `S06` | `S06.1`–`S06.3` verified | READY |
