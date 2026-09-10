@@ -37,6 +37,7 @@ The final shop is intentionally stable and conventional.
 - [`ANTIGRAVITY_FLORIST_PLAN.md`](./ANTIGRAVITY_FLORIST_PLAN.md) — overall phased roadmap
 - [`docs/phase-0/storyboard.md`](./docs/phase-0/storyboard.md) — art direction and scene storyboard
 - [`docs/phase-0/motion-tokens.md`](./docs/phase-0/motion-tokens.md) — shared motion language and constraints
+- [`docs/architecture/gpu-webgl-strategy.md`](./docs/architecture/gpu-webgl-strategy.md) — why DOM/GSAP remains the core renderer, when WebGL is justified, progressive enhancement, adaptive quality, GPU/image-memory considerations, and fallback strategy
 - [`docs/phase-8-audit.md`](./docs/phase-8-audit.md) — accessibility, responsive, performance, and CI audit
 - [`docs/phase-9-launch.md`](./docs/phase-9-launch.md) — launch checklist, fallback behavior, and remaining production work
 
