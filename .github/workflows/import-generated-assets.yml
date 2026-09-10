@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - '.asset-staging/zero-g-bloom-assets.tar.gz.b64'
+      - '.asset-staging/zero-g-bloom-assets.part-*'
 
 permissions:
   contents: write
@@ -18,17 +18,18 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Decode and extract archive
+      - name: Reassemble, decode, and extract archive
         run: |
           mkdir -p assets/generated/conversation-archive
-          base64 -d .asset-staging/zero-g-bloom-assets.tar.gz.b64 > /tmp/zero-g-bloom-assets.tar.gz
+          cat .asset-staging/zero-g-bloom-assets.part-* > /tmp/zero-g-bloom-assets.tar.gz.b64
+          base64 -d /tmp/zero-g-bloom-assets.tar.gz.b64 > /tmp/zero-g-bloom-assets.tar.gz
           tar -xzf /tmp/zero-g-bloom-assets.tar.gz -C assets/generated/conversation-archive
-          rm .asset-staging/zero-g-bloom-assets.tar.gz.b64
+          rm -f .asset-staging/zero-g-bloom-assets.part-*
 
       - name: Commit generated assets
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/generated/conversation-archive .asset-staging/zero-g-bloom-assets.tar.gz.b64
+          git add -A
           git commit -m "assets: archive generated Zero-G Bloom image references"
           git push
