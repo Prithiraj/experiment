@@ -54,7 +54,7 @@ S06 Verification and release
 
 ## Current checkpoint
 
-See [the tracker](./01-implementation-tracker.md) for the only authoritative slice status. The four-state motion sequence is verified; `S05.4` is the active fallback-parity slice.
+See [the tracker](./01-implementation-tracker.md) for the only authoritative slice status. Scene integration and fallback parity are verified; `S06.1` is the active local release-gate slice.
 
 ## Files
 

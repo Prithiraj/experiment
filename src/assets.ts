@@ -65,6 +65,9 @@ export function bindProductionAssets(root: ParentNode = document): () => void {
   );
   const deferred: HTMLImageElement[] = [];
   const sequenced: HTMLImageElement[] = [];
+  const staticProfile =
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
+    ['reduced', 'fallback'].includes(new URLSearchParams(window.location.search).get('motion') ?? '');
   let active = true;
 
   const load = (element: HTMLImageElement) => {
@@ -84,7 +87,9 @@ export function bindProductionAssets(root: ParentNode = document): () => void {
   };
 
   elements.forEach((element) => {
-    const loading = (element.dataset.assetLoading ?? 'deferred') as AssetLoading;
+    const loading = (staticProfile
+      ? element.dataset.assetReduced ?? element.dataset.assetLoading ?? 'deferred'
+      : element.dataset.assetLoading ?? 'deferred') as AssetLoading;
     element.decoding = 'async';
     element.draggable = false;
     if (!element.hasAttribute('alt')) element.alt = '';

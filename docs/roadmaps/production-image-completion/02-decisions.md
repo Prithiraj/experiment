@@ -10,3 +10,4 @@
 | `D006` | Preserve the ZIP and extracted originals locally, outside Git and the deployed bundle. | This protects non-compressed sources without inflating production delivery. | Accepted |
 | `D007` | Track editable production masters and import only optimized derivatives in the web app. | Masters support future iteration; derivatives protect loading performance. | Accepted |
 | `D008` | Require a critical release gate after local and browser verification. | Deployment should promote an already verified revision, not serve as the test environment. | Accepted |
+| `D009` | Expose deterministic `?motion=reduced` and `?motion=fallback` verification profiles. | Native reduced-motion remains honored while repeatable browser checks can exercise both non-animated paths independently of the test machine. | Accepted |

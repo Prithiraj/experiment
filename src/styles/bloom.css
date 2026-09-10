@@ -1,4 +1,5 @@
 .lotus-chapter{min-height:100svh;overflow:hidden;isolation:isolate;background:#081c18;color:var(--cream-050)}
+section.lotus-chapter[id]{scroll-margin-top:0}
 .lotus-chapter__media,.lotus-chapter__veil{position:absolute;inset:0}
 .lotus-chapter__media{z-index:0;overflow:hidden;background:#081c18}
 .lotus-chapter__scene,.lotus-chapter__ripple{position:absolute;inset:-2%;width:104%;height:104%;max-width:none;object-fit:cover;object-position:center;pointer-events:none}

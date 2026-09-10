@@ -95,5 +95,7 @@ button:focus-visible,a:focus-visible{outline:3px solid var(--fuchsia-500);outlin
   .return-bloom{width:220px;height:180px}
 }
 
-html[data-motion="reduced"] .hero-bouquet__bud,html[data-motion="reduced"] .hero-bouquet__early,html[data-motion="reduced"] .hero-bouquet__half{opacity:0}
-html[data-motion="reduced"] .hero-bouquet__bloom{opacity:1;transform:none}
+:is(html[data-motion="reduced"],html[data-motion-state="fallback"]) .hero-bouquet__bud,
+:is(html[data-motion="reduced"],html[data-motion-state="fallback"]) .hero-bouquet__early,
+:is(html[data-motion="reduced"],html[data-motion-state="fallback"]) .hero-bouquet__half{opacity:0}
+:is(html[data-motion="reduced"],html[data-motion-state="fallback"]) .hero-bouquet__bloom{opacity:1;transform:none}

@@ -9,6 +9,7 @@ import { initZeroGField } from './zero-g';
 
 type Cleanup = () => void;
 type SceneFactory = { name: string; init: () => Cleanup };
+const forceFallback = new URLSearchParams(window.location.search).get('motion') === 'fallback';
 
 const scenes: SceneFactory[] = [
   { name: 'release', init: initReleaseHero },
@@ -40,6 +41,10 @@ export function initMotionSystem(): Cleanup {
 
   const mountScenes = (profile: MotionProfile) => {
     clearScenes();
+    if (forceFallback) {
+      document.documentElement.dataset.motionState = 'fallback';
+      return;
+    }
     document.documentElement.dataset.motionState = profile === 'reduced' ? 'static' : 'mounting';
     if (profile === 'reduced') return;
 

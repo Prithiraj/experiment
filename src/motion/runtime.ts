@@ -6,9 +6,10 @@ interface NavigatorWithConnection extends Navigator {
 }
 
 const reducedQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+const motionOverride = new URLSearchParams(window.location.search).get('motion');
 
 export function currentMotionProfile(): MotionProfile {
-  return reducedQuery.matches ? 'reduced' : 'full';
+  return reducedQuery.matches || motionOverride === 'reduced' ? 'reduced' : 'full';
 }
 
 export function currentLayoutBand(): LayoutBand {

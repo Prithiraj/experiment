@@ -25,8 +25,8 @@ Statuses: `READY`, `IN PROGRESS`, `BLOCKED`, `VERIFIED`, `DEFERRED`.
 | `S05.1` | Priority/deferred loading behavior | `S04` | High | VERIFIED | `evidence/S05.1-loading.md` |
 | `S05.2` | Responsive cinematic handoff | `S05.1` | High | VERIFIED | `evidence/S05.2-cinematic.md` |
 | `S05.3` | Approved component states in motion chapters | `S05.2` | High | VERIFIED | `evidence/S05.3-motion.md` |
-| `S05.4` | Reduced/static fallback parity | `S05.3` | High | IN PROGRESS | `evidence/S05.4-fallback.md` |
-| `S06.1` | Hash, asset, type, and build checks | `S05` | High | READY | `evidence/S06.1-local-gates.md` |
+| `S05.4` | Reduced/static fallback parity | `S05.3` | High | VERIFIED | `evidence/S05.4-fallback.md` |
+| `S06.1` | Hash, asset, type, and build checks | `S05` | High | IN PROGRESS | `evidence/S06.1-local-gates.md` |
 | `S06.2` | 1440/1024/390 browser evidence | `S06.1` | High | READY | `evidence/S06.2-browser.md` |
 | `S06.3` | CI and live Pages verification | `S06.2` | Critical | READY | `evidence/S06.3-release.md` |
 
@@ -39,5 +39,5 @@ Statuses: `READY`, `IN PROGRESS`, `BLOCKED`, `VERIFIED`, `DEFERRED`.
 | `S02` | `S02.1`–`S02.3` verified | VERIFIED |
 | `S03` | All required `S03.*` verified or explicitly deferred | VERIFIED |
 | `S04` | `S04.1`–`S04.3` verified | VERIFIED |
-| `S05` | `S05.1`–`S05.4` verified | IN PROGRESS |
-| `S06` | `S06.1`–`S06.3` verified | READY |
+| `S05` | `S05.1`–`S05.4` verified | VERIFIED |
+| `S06` | `S06.1`–`S06.3` verified | IN PROGRESS |
