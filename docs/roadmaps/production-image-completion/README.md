@@ -54,7 +54,7 @@ S06 Verification and release
 
 ## Current checkpoint
 
-See [the tracker](./01-implementation-tracker.md) for the only authoritative slice status. Scene integration and fallback parity are verified; `S06.1` is the active local release-gate slice.
+See [the tracker](./01-implementation-tracker.md) for the only authoritative slice status. The deterministic local release gates are verified; `S06.2` is the active browser-matrix slice.
 
 ## Files
 
