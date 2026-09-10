@@ -1,5 +1,6 @@
 import './styles/main.css';
 import './styles/motion.css';
+import './styles/bloom.css';
 import './styles/zero-g.css';
 import './styles/orbit.css';
 import './styles/horizontal.css';

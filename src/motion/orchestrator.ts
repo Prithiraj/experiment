@@ -1,3 +1,4 @@
+import { initBloomChapter } from './bloom';
 import { initReleaseHero } from './hero';
 import { initHorizontalWorld } from './horizontal';
 import { initOrbitGallery } from './orbit';
@@ -11,6 +12,7 @@ type SceneFactory = { name: string; init: () => Cleanup };
 
 const scenes: SceneFactory[] = [
   { name: 'release', init: initReleaseHero },
+  { name: 'bloom', init: initBloomChapter },
   { name: 'field', init: initZeroGField },
   { name: 'orbit', init: initOrbitGallery },
   { name: 'horizontal', init: initHorizontalWorld },

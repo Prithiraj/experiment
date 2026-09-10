@@ -54,7 +54,7 @@ S06 Verification and release
 
 ## Current checkpoint
 
-See [the tracker](./01-implementation-tracker.md) for the only authoritative slice status. `S00` through `S04` and `S05.1` are verified; `S05.2` is the active cinematic-integration slice.
+See [the tracker](./01-implementation-tracker.md) for the only authoritative slice status. The responsive cinematic handoff is verified; `S05.3` is the active lotus-state motion slice.
 
 ## Files
 

@@ -9,11 +9,12 @@ interface GravityReading {
 
 const readings: GravityReading[] = [
   { selector: '[data-scene="release"]', scene: '01 / EARTH', value: '1.00g', meter: 1 },
-  { selector: '[data-scene="field"]', scene: '02 / DRIFT', value: '0.18g', meter: 0.18 },
-  { selector: '[data-scene="orbit"]', scene: '03 / ORBIT', value: '0.04g', meter: 0.04 },
-  { selector: '[data-scene="horizontal"]', scene: '04 / AXIS LOST', value: '0.01g', meter: 0.01 },
-  { selector: '[data-scene="vortex"]', scene: '05 / COLLAPSE', value: '∞g', meter: 1 },
-  { selector: '[data-scene="return"]', scene: '06 / RETURN', value: '1.00g', meter: 1 },
+  { selector: '[data-scene="bloom"]', scene: '02 / THAW', value: '0.72g', meter: 0.72 },
+  { selector: '[data-scene="field"]', scene: '03 / DRIFT', value: '0.18g', meter: 0.18 },
+  { selector: '[data-scene="orbit"]', scene: '04 / ORBIT', value: '0.04g', meter: 0.04 },
+  { selector: '[data-scene="horizontal"]', scene: '05 / AXIS LOST', value: '0.01g', meter: 0.01 },
+  { selector: '[data-scene="vortex"]', scene: '06 / COLLAPSE', value: '∞g', meter: 1 },
+  { selector: '[data-scene="return"]', scene: '07 / RETURN', value: '1.00g', meter: 1 },
 ];
 
 export function initGravityTelemetry(): Cleanup {

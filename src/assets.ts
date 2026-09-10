@@ -1,7 +1,15 @@
+import cinematicBloom from '../assets/production/cinematic/cinematic-lotus-bloom-pond.webp';
+import cinematicBloom768 from '../assets/production/cinematic/cinematic-lotus-bloom-pond-768.webp';
+import cinematicBud from '../assets/production/cinematic/cinematic-lotus-bud-pond.webp';
+import cinematicBud768 from '../assets/production/cinematic/cinematic-lotus-bud-pond-768.webp';
 import lotusBloom from '../assets/production/lotus/lotus-bloom-full.webp';
 import lotusBud from '../assets/production/lotus/lotus-bud.webp';
 import lotusLeaf from '../assets/production/lotus/lotus-leaf-foreground.webp';
 import lotusWater from '../assets/production/water/lotus-water-plate.webp';
+import waterReflection from '../assets/production/water/lotus-water-reflection-plate.webp';
+import waterReflection768 from '../assets/production/water/lotus-water-reflection-plate-768.webp';
+import waterRipple from '../assets/production/water/lotus-water-ripple-overlay.webp';
+import waterRipple768 from '../assets/production/water/lotus-water-ripple-overlay-768.webp';
 import petal01 from '../assets/production/petal-field/lotus-petal-floating-01.webp';
 import petal02 from '../assets/production/petal-field/lotus-petal-floating-02.webp';
 import petal03 from '../assets/production/petal-field/lotus-petal-floating-03.webp';
@@ -11,6 +19,8 @@ import violetNoise from '../assets/production/orbit/orbit-violet-noise.webp';
 import wildSignal from '../assets/production/orbit/orbit-wild-signal.webp';
 
 export const productionAssets = {
+  cinematicBloom,
+  cinematicBud,
   lotusBloom,
   lotusBud,
   lotusLeaf,
@@ -21,10 +31,19 @@ export const productionAssets = {
   citrusOrbit,
   quietMoon,
   violetNoise,
+  waterReflection,
+  waterRipple,
   wildSignal,
 } as const;
 
 type ProductionAssetKey = keyof typeof productionAssets;
+
+const responsiveSources: Partial<Record<ProductionAssetKey, { srcset: string; sizes: string }>> = {
+  cinematicBloom: { srcset: `${cinematicBloom768} 768w, ${cinematicBloom} 1536w`, sizes: '100vw' },
+  cinematicBud: { srcset: `${cinematicBud768} 768w, ${cinematicBud} 1536w`, sizes: '100vw' },
+  waterReflection: { srcset: `${waterReflection768} 768w, ${waterReflection} 1536w`, sizes: '100vw' },
+  waterRipple: { srcset: `${waterRipple768} 768w, ${waterRipple} 1536w`, sizes: '100vw' },
+};
 
 type AssetLoading = 'critical' | 'visible' | 'preload' | 'sequence' | 'deferred';
 
@@ -47,8 +66,13 @@ export function bindProductionAssets(root: ParentNode = document): () => void {
   const load = (element: HTMLImageElement) => {
     const key = element.dataset.productionImage as ProductionAssetKey | undefined;
     const source = key ? productionAssets[key] : undefined;
-    if (!source || element.src) return;
+    if (!key || !source || element.src) return;
 
+    const responsive = responsiveSources[key];
+    if (responsive) {
+      element.srcset = responsive.srcset;
+      element.sizes = responsive.sizes;
+    }
     element.src = source;
     element.decoding = 'async';
     element.draggable = false;
