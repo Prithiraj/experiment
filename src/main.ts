@@ -8,9 +8,12 @@ import './styles/return.css';
 import './styles/performance.css';
 import './styles/fallback.css';
 import './styles/polish.css';
+import { bindProductionAssets } from './assets';
 import { initMotionSystem } from './motion/orchestrator';
 import { initCart } from './ui/cart';
 import { initGravityTelemetry } from './ui/telemetry';
+
+bindProductionAssets();
 
 const cleanupMotionSystem = initMotionSystem();
 const cleanupCart = initCart();

@@ -56,21 +56,16 @@
 
         <div class="hero-bouquet" data-bouquet aria-hidden="true">
           <div class="bouquet-halo"></div>
-          <div class="stem stem--1"></div><div class="stem stem--2"></div><div class="stem stem--3"></div>
-          <span class="bloom bloom--xl bloom--pink" data-release-actor style="--x:16%;--y:19%;--r:-8deg"></span>
-          <span class="bloom bloom--lg bloom--coral" data-release-actor style="--x:61%;--y:23%;--r:11deg"></span>
-          <span class="bloom bloom--md bloom--orange" data-release-actor style="--x:40%;--y:5%;--r:4deg"></span>
-          <span class="bloom bloom--lg bloom--lavender" data-release-actor style="--x:55%;--y:53%;--r:-13deg"></span>
-          <span class="bloom bloom--md bloom--cream" data-release-actor style="--x:22%;--y:57%;--r:8deg"></span>
-          <span class="leaf leaf--1" data-release-actor></span><span class="leaf leaf--2" data-release-actor></span>
-          <span class="leaf leaf--3" data-release-actor></span><span class="leaf leaf--4" data-release-actor></span>
+          <img class="hero-bouquet__image hero-bouquet__bud" data-production-image="lotusBud" data-lotus-bud data-release-actor alt="" />
+          <img class="hero-bouquet__image hero-bouquet__bloom" data-production-image="lotusBloom" data-lotus-bloom data-release-actor alt="" />
+          <img class="hero-bouquet__leaf" data-production-image="lotusLeaf" data-release-actor alt="" />
         </div>
 
         <div class="floating-petals" aria-hidden="true">
-          <i class="petal" data-release-actor style="--px:8%;--py:25%;--pr:24deg"></i>
-          <i class="petal" data-release-actor style="--px:77%;--py:17%;--pr:-38deg"></i>
-          <i class="petal" data-release-actor style="--px:88%;--py:66%;--pr:50deg"></i>
-          <i class="petal" data-release-actor style="--px:44%;--py:80%;--pr:-18deg"></i>
+          <img class="petal petal--image" data-production-image="petal01" data-release-actor style="--px:8%;--py:25%;--pr:24deg" alt="" />
+          <img class="petal petal--image" data-production-image="petal02" data-release-actor style="--px:77%;--py:17%;--pr:-38deg" alt="" />
+          <img class="petal petal--image" data-production-image="petal03" data-release-actor style="--px:88%;--py:66%;--pr:50deg" alt="" />
+          <img class="petal petal--image" data-production-image="petal01" data-release-actor style="--px:44%;--py:80%;--pr:-18deg" alt="" />
         </div>
 
         <div class="scroll-cue" aria-hidden="true">
@@ -85,16 +80,16 @@
           <p>Every stem follows its own rule. Scroll down; nothing agrees on which way down is.</p>
         </div>
         <div class="field-stage" aria-hidden="true">
+          <img class="field-water-plate" data-production-image="lotusWater" data-zero-actor data-depth="far" alt="" />
           <span class="field-word field-word--one" data-zero-actor data-depth="far">SOFT</span>
           <span class="field-word field-word--two" data-zero-actor data-depth="mid">LOUD</span>
-          <span class="field-bloom field-bloom--a bloom bloom--xl bloom--coral" data-zero-actor data-depth="foreground"></span>
-          <span class="field-bloom field-bloom--b bloom bloom--lg bloom--pink" data-zero-actor data-depth="near"></span>
-          <span class="field-bloom field-bloom--c bloom bloom--md bloom--orange" data-zero-actor data-depth="mid"></span>
-          <span class="field-bloom field-bloom--d bloom bloom--lg bloom--lavender" data-zero-actor data-depth="far"></span>
-          <span class="field-leaf field-leaf--a" data-zero-actor data-depth="near"></span>
-          <span class="field-leaf field-leaf--b" data-zero-actor data-depth="mid"></span>
-          <span class="field-petal field-petal--a petal" data-zero-actor data-depth="foreground"></span>
-          <span class="field-petal field-petal--b petal" data-zero-actor data-depth="far"></span>
+          <img class="field-image field-image--bloom field-bloom--a" data-production-image="lotusBloom" data-zero-actor data-depth="foreground" alt="" />
+          <img class="field-image field-image--bloom field-bloom--b" data-production-image="lotusBloom" data-zero-actor data-depth="near" alt="" />
+          <img class="field-image field-image--bud field-bloom--c" data-production-image="lotusBud" data-zero-actor data-depth="mid" alt="" />
+          <img class="field-image field-image--leaf field-leaf--a" data-production-image="lotusLeaf" data-zero-actor data-depth="near" alt="" />
+          <img class="field-image field-image--leaf field-leaf--b" data-production-image="lotusLeaf" data-zero-actor data-depth="mid" alt="" />
+          <img class="field-image field-image--petal field-petal--a" data-production-image="petal01" data-zero-actor data-depth="foreground" alt="" />
+          <img class="field-image field-image--petal field-petal--b" data-production-image="petal02" data-zero-actor data-depth="far" alt="" />
         </div>
       </section>
 
@@ -106,22 +101,22 @@
         </div>
         <div class="orbit-stage" data-orbit-stage>
           <article class="orbit-card product-card" data-orbit-card data-product="wild-signal">
-            <div class="mini-bouquet mini-bouquet--pink" aria-hidden="true"><i></i><i></i><i></i></div>
+            <div class="mini-bouquet mini-bouquet--photo" aria-hidden="true"><img data-production-image="wildSignal" alt="" /></div>
             <p class="product-kicker">01 / Electric romance</p><h3>Wild Signal</h3><p>Peony · ranunculus · sweet pea</p>
             <div class="product-meta"><strong>$95</strong><button type="button" data-add-to-cart>Add</button></div>
           </article>
           <article class="orbit-card product-card" data-orbit-card data-product="citrus-orbit">
-            <div class="mini-bouquet mini-bouquet--orange" aria-hidden="true"><i></i><i></i><i></i></div>
+            <div class="mini-bouquet mini-bouquet--photo" aria-hidden="true"><img data-production-image="citrusOrbit" alt="" /></div>
             <p class="product-kicker">02 / Solar flare</p><h3>Citrus Orbit</h3><p>Poppy · marigold · garden rose</p>
             <div class="product-meta"><strong>$88</strong><button type="button" data-add-to-cart>Add</button></div>
           </article>
           <article class="orbit-card product-card" data-orbit-card data-product="violet-noise">
-            <div class="mini-bouquet mini-bouquet--violet" aria-hidden="true"><i></i><i></i><i></i></div>
+            <div class="mini-bouquet mini-bouquet--photo" aria-hidden="true"><img data-production-image="violetNoise" alt="" /></div>
             <p class="product-kicker">03 / After dark</p><h3>Violet Noise</h3><p>Scabiosa · lilac · anemone</p>
             <div class="product-meta"><strong>$112</strong><button type="button" data-add-to-cart>Add</button></div>
           </article>
           <article class="orbit-card product-card" data-orbit-card data-product="quiet-moon">
-            <div class="mini-bouquet mini-bouquet--cream" aria-hidden="true"><i></i><i></i><i></i></div>
+            <div class="mini-bouquet mini-bouquet--photo" aria-hidden="true"><img data-production-image="quietMoon" alt="" /></div>
             <p class="product-kicker">04 / Pale gravity</p><h3>Quiet Moon</h3><p>Cosmos · hellebore · jasmine</p>
             <div class="product-meta"><strong>$105</strong><button type="button" data-add-to-cart>Add</button></div>
           </article>
@@ -131,10 +126,10 @@
       <section id="story" class="axis scene scene--axis" data-scene="horizontal" aria-label="Not just a bouquet">
         <div class="axis-track" data-axis-track>
           <div class="axis-panel axis-panel--intro"><p class="eyebrow">A small axis problem</p><span>Scroll keeps going down.</span><strong>We don't.</strong></div>
-          <div class="axis-panel axis-panel--word"><span class="axis-flower bloom bloom--xl bloom--pink" aria-hidden="true"></span><b>NOT</b></div>
-          <div class="axis-panel axis-panel--word"><span class="axis-flower bloom bloom--lg bloom--orange" aria-hidden="true"></span><b>JUST</b></div>
-          <div class="axis-panel axis-panel--word"><span class="axis-flower bloom bloom--lg bloom--lavender" aria-hidden="true"></span><b>A</b></div>
-          <div class="axis-panel axis-panel--word axis-panel--final"><span class="axis-flower bloom bloom--xl bloom--coral" aria-hidden="true"></span><b>BOUQUET.</b></div>
+          <div class="axis-panel axis-panel--word"><img class="axis-flower axis-flower--pink" data-production-image="lotusBloom" aria-hidden="true" alt="" /><b>NOT</b></div>
+          <div class="axis-panel axis-panel--word"><img class="axis-flower axis-flower--orange" data-production-image="lotusBud" aria-hidden="true" alt="" /><b>JUST</b></div>
+          <div class="axis-panel axis-panel--word"><img class="axis-flower axis-flower--lavender" data-production-image="lotusLeaf" aria-hidden="true" alt="" /><b>A</b></div>
+          <div class="axis-panel axis-panel--word axis-panel--final"><img class="axis-flower axis-flower--coral" data-production-image="lotusBloom" aria-hidden="true" alt="" /><b>BOUQUET.</b></div>
         </div>
       </section>
 
@@ -144,26 +139,26 @@
         </div>
         <div class="vortex-stage" data-vortex-stage aria-hidden="true">
           <span class="vortex-core">✦</span>
-          <span class="vortex-actor bloom bloom--md bloom--pink" data-vortex-actor style="--vx:12%;--vy:18%"></span>
-          <span class="vortex-actor bloom bloom--lg bloom--orange" data-vortex-actor style="--vx:77%;--vy:14%"></span>
-          <span class="vortex-actor bloom bloom--md bloom--lavender" data-vortex-actor style="--vx:84%;--vy:68%"></span>
-          <span class="vortex-actor petal" data-vortex-actor style="--vx:18%;--vy:78%"></span>
-          <span class="vortex-actor petal" data-vortex-actor style="--vx:65%;--vy:84%"></span>
-          <span class="vortex-actor field-leaf field-leaf--a" data-vortex-actor style="--vx:34%;--vy:13%"></span>
+          <img class="vortex-actor vortex-image" data-production-image="lotusBloom" data-vortex-actor style="--vx:12%;--vy:18%" alt="" />
+          <img class="vortex-actor vortex-image" data-production-image="lotusBud" data-vortex-actor style="--vx:77%;--vy:14%" alt="" />
+          <img class="vortex-actor vortex-image" data-production-image="lotusLeaf" data-vortex-actor style="--vx:84%;--vy:68%" alt="" />
+          <img class="vortex-actor vortex-image vortex-image--petal" data-production-image="petal01" data-vortex-actor style="--vx:18%;--vy:78%" alt="" />
+          <img class="vortex-actor vortex-image vortex-image--petal" data-production-image="petal03" data-vortex-actor style="--vx:65%;--vy:84%" alt="" />
+          <img class="vortex-actor vortex-image vortex-image--leaf" data-production-image="lotusLeaf" data-vortex-actor style="--vx:34%;--vy:13%" alt="" />
         </div>
       </section>
 
       <section id="shop" class="shop-section scene scene--return" data-scene="return" aria-labelledby="shop-title">
-        <div class="return-flower" aria-hidden="true"><span class="return-stem"></span><span class="return-bloom bloom bloom--lg bloom--pink"></span></div>
+        <div class="return-flower" aria-hidden="true"><span class="return-stem"></span><img class="return-bloom" data-production-image="lotusBloom" alt="" /></div>
         <div class="shop-heading">
           <div><p class="eyebrow">Gravity restored</p><h2 id="shop-title">Now, choose your flowers.</h2></div>
           <p>Chaos becomes arrangement. The shopping part stays beautifully ordinary.</p>
         </div>
         <div class="shop-grid">
-          <article class="shop-card"><div class="shop-art shop-art--1" aria-hidden="true"></div><p class="product-kicker">Best seller</p><h3>Wild Signal</h3><p>Peony, ranunculus, sweet pea.</p><div class="product-meta"><strong>$95</strong><button type="button" data-add-to-cart>Add to bag</button></div></article>
-          <article class="shop-card"><div class="shop-art shop-art--2" aria-hidden="true"></div><p class="product-kicker">Bright</p><h3>Citrus Orbit</h3><p>Poppy, marigold, garden rose.</p><div class="product-meta"><strong>$88</strong><button type="button" data-add-to-cart>Add to bag</button></div></article>
-          <article class="shop-card"><div class="shop-art shop-art--3" aria-hidden="true"></div><p class="product-kicker">Moody</p><h3>Violet Noise</h3><p>Scabiosa, lilac, anemone.</p><div class="product-meta"><strong>$112</strong><button type="button" data-add-to-cart>Add to bag</button></div></article>
-          <article class="shop-card"><div class="shop-art shop-art--4" aria-hidden="true"></div><p class="product-kicker">Soft</p><h3>Quiet Moon</h3><p>Cosmos, hellebore, jasmine.</p><div class="product-meta"><strong>$105</strong><button type="button" data-add-to-cart>Add to bag</button></div></article>
+          <article class="shop-card"><div class="shop-art shop-art--1" aria-hidden="true"><img data-production-image="wildSignal" alt="" /></div><p class="product-kicker">Best seller</p><h3>Wild Signal</h3><p>Peony, ranunculus, sweet pea.</p><div class="product-meta"><strong>$95</strong><button type="button" data-add-to-cart>Add to bag</button></div></article>
+          <article class="shop-card"><div class="shop-art shop-art--2" aria-hidden="true"><img data-production-image="citrusOrbit" alt="" /></div><p class="product-kicker">Bright</p><h3>Citrus Orbit</h3><p>Poppy, marigold, garden rose.</p><div class="product-meta"><strong>$88</strong><button type="button" data-add-to-cart>Add to bag</button></div></article>
+          <article class="shop-card"><div class="shop-art shop-art--3" aria-hidden="true"><img data-production-image="violetNoise" alt="" /></div><p class="product-kicker">Moody</p><h3>Violet Noise</h3><p>Scabiosa, lilac, anemone.</p><div class="product-meta"><strong>$112</strong><button type="button" data-add-to-cart>Add to bag</button></div></article>
+          <article class="shop-card"><div class="shop-art shop-art--4" aria-hidden="true"><img data-production-image="quietMoon" alt="" /></div><p class="product-kicker">Soft</p><h3>Quiet Moon</h3><p>Cosmos, hellebore, jasmine.</p><div class="product-meta"><strong>$105</strong><button type="button" data-add-to-cart>Add to bag</button></div></article>
         </div>
       </section>
 

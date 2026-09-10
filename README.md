@@ -41,6 +41,7 @@ The final shop is intentionally stable and conventional.
 - [`docs/architecture/gpu-webgl-strategy.md`](./docs/architecture/gpu-webgl-strategy.md) — why DOM/GSAP remains the core renderer, when WebGL is justified, progressive enhancement, adaptive quality, GPU/image-memory considerations, and fallback strategy
 - [`docs/phase-8-audit.md`](./docs/phase-8-audit.md) — accessibility, responsive, performance, and CI audit
 - [`docs/phase-9-launch.md`](./docs/phase-9-launch.md) — launch checklist, fallback behavior, and remaining production work
+- [`docs/asset-integration.md`](./docs/asset-integration.md) — recovered archive provenance and current production image integration
 
 ## Accessibility contract
 
@@ -67,4 +68,4 @@ GitHub Actions verifies TypeScript and a production Vite build on pushes and pul
 
 ## Scope
 
-This is a front-end interaction prototype. Product imagery is currently CSS botanical art, cart behavior is a UI shell, and no payment/catalog backend is connected yet. Real-device Safari/iOS QA and final-asset Core Web Vitals profiling remain launch tasks once production photography and commerce infrastructure are introduced.
+This is a front-end interaction prototype. Production image assets now replace the CSS-only botanical placeholders across the core storytelling scenes. The recovered conversation archive is separated into reference thumbnails and locally preserved original masters; cart behavior is still a UI shell, and no payment/catalog backend is connected yet. Real-device Safari/iOS QA and final-asset Core Web Vitals profiling remain launch tasks.

@@ -141,3 +141,8 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+
+# Local source archive and graph audit output; neither is part of the web bundle.
+/zero_g_bloom_all_generated_images.zip
+/assets/reference/conversation-archive-originals/
+/graphify-out/

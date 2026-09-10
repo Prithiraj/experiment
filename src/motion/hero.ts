@@ -38,6 +38,8 @@ export function initReleaseHero(): () => void {
   if (!hero) return () => undefined;
 
   const bouquet = hero.querySelector<HTMLElement>('[data-bouquet]');
+  const bud = hero.querySelector<HTMLElement>('[data-lotus-bud]');
+  const bloom = hero.querySelector<HTMLElement>('[data-lotus-bloom]');
   const actors = gsap.utils.toArray<HTMLElement>('[data-release-actor]', hero);
   const accentLine = hero.querySelector<HTMLElement>('.hero-line--accent');
   const split = accentLine ? splitHeroGlyphs(accentLine) : null;
@@ -64,6 +66,12 @@ export function initReleaseHero(): () => void {
       .to('.hero-copy .eyebrow', { y: -20, opacity: 0.38, duration: 0.45 }, 0.08)
       .to('.hero-intro, .hero-actions', { y: 36, opacity: 0, duration: 0.48 }, 0.18)
       .to('.scroll-cue', { y: 24, opacity: 0, duration: 0.28 }, 0.02);
+
+    if (bud && bloom) {
+      timeline
+        .to(bud, { opacity: 0, scale: 0.82, duration: 0.42 }, 0.2)
+        .to(bloom, { opacity: 1, scale: 1, duration: 0.48 }, 0.25);
+    }
 
     actors.forEach((actor, index) => {
       const band = index % 4;

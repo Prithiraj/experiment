@@ -1,0 +1,17 @@
+{
+  "iteration": "zero-g-bloom-production-01",
+  "sourcePolicy": "PNG masters are preserved locally; WebP derivatives are shipped.",
+  "assets": [
+    { "id": "lotus-bud", "master": "lotus/lotus-bud.png", "web": "lotus/lotus-bud.webp", "role": "hero opening state, field actor" },
+    { "id": "lotus-bloom-full", "master": "lotus/lotus-bloom-full.png", "web": "lotus/lotus-bloom-full.webp", "role": "hero release state, field and return actor" },
+    { "id": "lotus-leaf-foreground", "master": "lotus/lotus-leaf-foreground.png", "web": "lotus/lotus-leaf-foreground.webp", "role": "supporting botanical actor" },
+    { "id": "lotus-petal-floating-01", "master": "petal-field/lotus-petal-floating-01.png", "web": "petal-field/lotus-petal-floating-01.webp", "role": "floating petal actor" },
+    { "id": "lotus-petal-floating-02", "master": "petal-field/lotus-petal-floating-02.png", "web": "petal-field/lotus-petal-floating-02.webp", "role": "floating petal actor" },
+    { "id": "lotus-petal-floating-03", "master": "petal-field/lotus-petal-floating-03.png", "web": "petal-field/lotus-petal-floating-03.webp", "role": "floating petal actor" },
+    { "id": "lotus-water-plate", "master": "water/lotus-water-plate.png", "web": "water/lotus-water-plate.webp", "role": "zero-G atmospheric plate" },
+    { "id": "orbit-wild-signal", "master": "orbit/orbit-wild-signal.png", "web": "orbit/orbit-wild-signal.webp", "role": "collection and shop product art" },
+    { "id": "orbit-citrus-orbit", "master": "orbit/orbit-citrus-orbit.png", "web": "orbit/orbit-citrus-orbit.webp", "role": "collection and shop product art" },
+    { "id": "orbit-violet-noise", "master": "orbit/orbit-violet-noise.png", "web": "orbit/orbit-violet-noise.webp", "role": "collection and shop product art" },
+    { "id": "orbit-quiet-moon", "master": "orbit/orbit-quiet-moon.png", "web": "orbit/orbit-quiet-moon.webp", "role": "collection and shop product art" }
+  ]
+}

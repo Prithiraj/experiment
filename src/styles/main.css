@@ -51,3 +51,48 @@ button:focus-visible,a:focus-visible{outline:3px solid var(--fuchsia-500);outlin
 @media (max-width:640px){.site-header{top:10px;height:54px}.brand{font-size:.9rem}.bag-button{padding:.58rem .8rem}.hero{padding:110px 20px 70px;align-items:start}.hero-title{font-size:clamp(3.7rem,19vw,5.5rem)}.hero-line--quiet{font-size:.36em;margin-left:3%}.hero-bouquet{width:86vw;right:-24vw;bottom:2vh;opacity:.46}.hero-intro{max-width:80%;font-size:.95rem}.hero-actions{max-width:70%}.button{width:100%}.scroll-cue{left:20px}.zero-field,.orbit,.vortex{padding:110px 20px}.field-stage{opacity:.72}.orbit-stage{display:grid;grid-template-columns:1fr;gap:14px;min-height:auto;margin-top:40px}.orbit-card{position:relative!important;inset:auto!important;width:100%}.axis-track{width:100%;display:block;transform:none}.axis-panel{width:100%;min-height:70svh;flex-basis:auto}.axis-panel--word b{font-size:28vw}.shop-section{padding:100px 20px}.return-flower{height:180px}.shop-grid{grid-template-columns:1fr}.services article{padding:55px 24px}.seasonal{margin:30px 12px;padding:80px 24px;min-height:auto}.seasonal-orb{width:74vw}.testimonials{padding:90px 20px}.site-footer{grid-template-columns:1fr;padding:70px 24px 28px}.footer-note{grid-column:1}.shop-art{height:240px}}
 
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}.axis-track{transform:none}}
+
+/* Production image layer: transparent cutouts sit over the existing color fields. */
+.hero-bouquet__image,.hero-bouquet__leaf,.field-image,.axis-flower,.vortex-image,.return-bloom{display:block;position:absolute;object-fit:contain;pointer-events:none}
+.hero-bouquet__image{inset:6% 0 4%;width:100%;height:90%;z-index:4;filter:drop-shadow(0 22px 24px rgba(16,43,36,.18));transform-origin:50% 70%}
+.hero-bouquet__bud{opacity:1;transform:scale(.94)}
+.hero-bouquet__bloom{opacity:0;transform:scale(.84)}
+.hero-bouquet__leaf{z-index:3;left:4%;bottom:12%;width:40%;height:34%;transform:rotate(-10deg);filter:drop-shadow(0 16px 18px rgba(16,43,36,.18))}
+.petal--image{width:clamp(34px,7vw,92px);height:auto;aspect-ratio:auto;border-radius:0;background:transparent;box-shadow:none;object-fit:contain;transform:translate(-50%,-50%) rotate(var(--pr,0deg))}
+
+.field-water-plate{position:absolute;z-index:0;left:4%;bottom:7%;width:92%;height:52%;border-radius:28px;object-fit:cover;opacity:.46;mix-blend-mode:screen;filter:saturate(.78) contrast(.94)}
+.field-image{z-index:3;height:auto;transform-origin:center;filter:drop-shadow(0 20px 22px rgba(0,0,0,.2))}
+.field-image--bloom{width:min(24vw,300px)}
+.field-image--bud{width:min(15vw,180px)}
+.field-image--leaf{width:min(18vw,230px)}
+.field-image--petal{width:min(8vw,100px);filter:drop-shadow(0 12px 16px rgba(0,0,0,.18))}
+.field-bloom--a{left:4%;top:62%}.field-bloom--b{left:72%;top:34%}.field-bloom--c{left:57%;top:68%}
+.field-leaf--a{left:37%;top:62%}.field-leaf--b{left:66%;top:12%}
+.field-petal--a{left:36%;top:34%}.field-petal--b{left:91%;top:80%}
+
+.mini-bouquet--photo{display:grid;place-items:center}
+.mini-bouquet--photo img{width:100%;height:100%;object-fit:contain}
+.axis-flower{left:50%;top:50%;width:min(34vw,360px);height:min(34vw,360px);transform:translate(-50%,-50%);filter:drop-shadow(0 18px 20px rgba(16,43,36,.18))}
+.vortex-image{width:clamp(90px,16vw,220px);height:auto;filter:drop-shadow(0 18px 22px rgba(0,0,0,.22))}
+.vortex-image--petal{width:clamp(42px,8vw,100px)}
+.vortex-image--leaf{width:clamp(110px,18vw,240px)}
+.return-bloom{left:50%;top:0;width:min(28vw,300px);height:220px;translate:-50% 0;object-fit:contain;filter:drop-shadow(0 18px 20px rgba(16,43,36,.16))}
+.shop-art{position:relative;overflow:hidden}
+.shop-art img{position:relative;z-index:1;width:100%;height:100%;object-fit:contain}
+
+@media(max-width:640px){
+  .hero-bouquet__image{inset:7% 0 2%;height:88%}
+  .hero-bouquet__leaf{left:2%;bottom:10%;width:42%;height:32%}
+  .field-water-plate{left:-8%;width:116%;height:42%;bottom:10%;border-radius:20px}
+  .field-image--bloom{width:min(42vw,220px)}
+  .field-image--bud{width:min(24vw,130px)}
+  .field-image--leaf{width:min(34vw,180px)}
+  .field-image--petal{width:min(14vw,76px)}
+  .field-bloom--a{left:2%;top:64%}.field-bloom--b{left:68%;top:36%}.field-bloom--c{left:54%;top:74%}
+  .field-leaf--a{left:28%;top:60%}.field-leaf--b{left:64%;top:16%}
+  .axis-flower{width:58vw;height:58vw}
+  .return-bloom{width:220px;height:180px}
+}
+
+html[data-motion="reduced"] .hero-bouquet__bud{opacity:0}
+html[data-motion="reduced"] .hero-bouquet__bloom{opacity:1;transform:none}

@@ -34,7 +34,7 @@ Reduced motion uses the intentional `static` state rather than the failure state
 - [x] Static fallback if animation initialization fails.
 - [x] TypeScript check in CI.
 - [x] Production Vite build in CI.
-- [ ] Replace CSS botanical prototypes with final optimized photography/art direction assets.
+- [x] Replace the core CSS botanical prototypes with individually usable optimized production assets; add remaining campaign/macro photography in a later visual pass.
 - [ ] Run real-device Safari/iOS QA for pinning and transformed scene behavior.
 - [ ] Run Lighthouse and field-oriented Core Web Vitals profiling after final assets are installed.
 - [ ] Connect product/catalog/cart actions to a real commerce backend.
@@ -46,4 +46,4 @@ This repository is now a **working front-end prototype** of the full antigravity
 
 ## Recommended next iteration
 
-The highest-value next pass is not more animation. Replace the CSS flower placeholders with the final visual asset system, then tune each scene against the actual image weights, crop behavior, and real-device performance profile.
+The highest-value next pass is not more animation. Tune the installed image pack against actual image weights, crop behavior, and real-device performance, then add dedicated macro and campaign assets where the current reusable set is not expressive enough.
