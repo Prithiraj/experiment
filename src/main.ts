@@ -13,7 +13,7 @@ import { initMotionSystem } from './motion/orchestrator';
 import { initCart } from './ui/cart';
 import { initGravityTelemetry } from './ui/telemetry';
 
-bindProductionAssets();
+const cleanupProductionAssets = bindProductionAssets();
 
 const cleanupMotionSystem = initMotionSystem();
 const cleanupCart = initCart();
@@ -27,6 +27,7 @@ const onPageHide = (event: PageTransitionEvent) => {
   cleanupTelemetry();
   cleanupCart();
   cleanupMotionSystem();
+  cleanupProductionAssets();
 };
 
 const onPageShow = (event: PageTransitionEvent) => {

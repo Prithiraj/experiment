@@ -22,8 +22,8 @@ Statuses: `READY`, `IN PROGRESS`, `BLOCKED`, `VERIFIED`, `DEFERRED`.
 | `S04.1` | Extended manifest | `S02`, approved `S03` children | Medium | VERIFIED | `evidence/S04.1-manifest.md` |
 | `S04.2` | Repeatable verifier | `S04.1` | Medium | VERIFIED | `evidence/S04.2-verifier.md` |
 | `S04.3` | Import/orphan/reference guards | `S04.2` | Medium | VERIFIED | `evidence/S04.3-guards.md` |
-| `S05.1` | Priority/deferred loading behavior | `S04` | High | IN PROGRESS | `evidence/S05.1-loading.md` |
-| `S05.2` | Responsive cinematic handoff | `S05.1` | High | READY | `evidence/S05.2-cinematic.md` |
+| `S05.1` | Priority/deferred loading behavior | `S04` | High | VERIFIED | `evidence/S05.1-loading.md` |
+| `S05.2` | Responsive cinematic handoff | `S05.1` | High | IN PROGRESS | `evidence/S05.2-cinematic.md` |
 | `S05.3` | Approved component states in motion chapters | `S05.2` | High | READY | `evidence/S05.3-motion.md` |
 | `S05.4` | Reduced/static fallback parity | `S05.3` | High | READY | `evidence/S05.4-fallback.md` |
 | `S06.1` | Hash, asset, type, and build checks | `S05` | High | READY | `evidence/S06.1-local-gates.md` |
