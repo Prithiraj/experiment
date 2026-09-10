@@ -18,15 +18,14 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Reassemble, decode, and extract archive
+      - name: Reassemble and extract archive
         run: |
           if ! compgen -G ".asset-staging/zero-g-bloom-assets.part-*" > /dev/null; then
             echo "No staging chunks; nothing to import."
             exit 0
           fi
           mkdir -p assets/generated/conversation-archive
-          cat .asset-staging/zero-g-bloom-assets.part-* > /tmp/zero-g-bloom-assets.tar.gz.b64
-          base64 -d /tmp/zero-g-bloom-assets.tar.gz.b64 > /tmp/zero-g-bloom-assets.tar.gz
+          cat .asset-staging/zero-g-bloom-assets.part-* > /tmp/zero-g-bloom-assets.tar.gz
           tar -xzf /tmp/zero-g-bloom-assets.tar.gz -C assets/generated/conversation-archive
           rm -f .asset-staging/zero-g-bloom-assets.part-*
 
