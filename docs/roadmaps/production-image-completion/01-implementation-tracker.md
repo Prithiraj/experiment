@@ -13,10 +13,10 @@ Statuses: `READY`, `IN PROGRESS`, `BLOCKED`, `VERIFIED`, `DEFERRED`.
 | `S02.2` | Bloom scene master and responsive WebP pair | `S01` | Medium | VERIFIED | `evidence/S02.2-bloom-scene.md` |
 | `S02.3` | Crop, color, horizon, and payload QA | `S02.1`, `S02.2` | Medium | VERIFIED | `evidence/S02.3-continuity.md` |
 | `S03.1a` | Early-open lotus cutout | `S01.3` | Medium | VERIFIED | `evidence/S03.1a-early-open.md` |
-| `S03.1b` | Half-open lotus cutout | `S03.1a` | Medium | IN PROGRESS | `evidence/S03.1b-half-open.md` |
-| `S03.2a` | Stem and sepals layers | `S03.1` | Medium | READY | `evidence/S03.2a-stem-sepals.md` |
-| `S03.2b` | Approved inner-structure layers | `S03.2a` | Medium | READY | `evidence/S03.2b-inner-structure.md` |
-| `S03.3a` | Reflection plate | `S02.3` | Medium | READY | `evidence/S03.3a-reflection.md` |
+| `S03.1b` | Half-open lotus cutout | `S03.1a` | Medium | VERIFIED | `evidence/S03.1b-half-open.md` |
+| `S03.2a` | Stem and sepals layers | `S03.1` | Medium | DEFERRED | `evidence/S03.2-structural-deferment.md` |
+| `S03.2b` | Approved inner-structure layers | `S03.2a` | Medium | DEFERRED | `evidence/S03.2-structural-deferment.md` |
+| `S03.3a` | Reflection plate | `S02.3` | Medium | IN PROGRESS | `evidence/S03.3a-reflection.md` |
 | `S03.3b` | Ripple plus minimal atmosphere overlays | `S03.3a` | Medium | READY | `evidence/S03.3b-overlays.md` |
 | `S03.4` | Distinct depth leaves/petals or deferment | `S01.3` | Medium | READY | `evidence/S03.4-depth-assets.md` |
 | `S04.1` | Extended manifest | `S02`, approved `S03` children | Medium | READY | `evidence/S04.1-manifest.md` |

@@ -24,7 +24,7 @@ candidate,CIN-BUD,01,01_lotus-bud-cinematic.png,55c7f8102298c34186702c1a854e5d02
 candidate,CIN-BLOOM,02,02_lotus-full-bloom-cinematic.png,d80753ff94c6ec851ddbc6f33ff259a5e6bd90470b1e6723d52a267f9045b688,standalone-scene,CIN-BLOOM,direct-convert,P0,bloom-chapter,cinematic-lotus-bloom-pond,approved,"Responsive 1536 and 768 derivatives"
 candidate,LOT-BUD,03-17,,,repeated-board-concept,LOT-BUD,retain-existing,P0,hero-and-field,lotus-bud,integrated,"Existing transparent production asset"
 candidate,LOT-EARLY,03-17,,,repeated-board-concept,LOT-EARLY,generate,P0,bloom-progression,lotus-bloom-early-open,production-ready,"Generated individually; alpha and payload gates passed"
-candidate,LOT-HALF,03-17,,,repeated-board-concept,LOT-HALF,generate,P0,bloom-progression,lotus-bloom-half-open,approved,"Board panels are too small and labeled"
+candidate,LOT-HALF,03-17,,,repeated-board-concept,LOT-HALF,generate,P0,bloom-progression,lotus-bloom-half-open,production-ready,"Generated individually; alpha and payload gates passed"
 candidate,LOT-FULL,03-17,,,repeated-board-concept,LOT-FULL,retain-existing,P0,hero-field-return,lotus-bloom-full,integrated,"Existing transparent production asset"
 candidate,LOT-SEPALS,03-17,,,repeated-board-concept,LOT-SEPALS,defer,P2,layered-bloom,lotus-sepals,deferred,"Whole-state crossfades do not require an independent sepal layer"
 candidate,LOT-STEM,03-17,,,repeated-board-concept,LOT-STEM,defer,P2,layered-bloom,lotus-stem,deferred,"Existing CSS stem is cheaper and adequate"
