@@ -1,6 +1,6 @@
 # Zero-G Bloom — Production Image Completion Plan
 
-**Status:** Approved; execution in progress  
+**Status:** Complete; released and live-verified
 **Prepared:** 2026-09-10  
 **Execution workspace:** [`roadmaps/production-image-completion/`](./roadmaps/production-image-completion/README.md)
 
@@ -14,17 +14,17 @@ Complete the transition from the recovered conversation archive to an individual
 
 | Area | Verified state |
 | --- | --- |
-| Source archive | `zero_g_bloom_all_generated_images.zip`, approximately 47 MB, preserved locally and Git-ignored |
-| Extracted originals | 21 PNG files, approximately 48 MB, under `assets/reference/conversation-archive-originals/zero_g_bloom_generated_assets/` |
-| Integrity | All 21 extracted PNG SHA-256 values match `assets/reference/conversation-archive/asset_inventory.csv` |
+| Source archive | `zero_g_bloom_all_generated_images.zip`, 48,372,096 bytes, preserved locally and Git-ignored |
+| Extracted originals | 21 non-compressed PNG files under `assets/reference/conversation-archive-originals/zero_g_bloom_generated_assets/` |
+| Integrity | All 21 extracted PNG SHA-256 values match their ZIP members; 0 mismatched and 0 missing |
 | Reference previews | 21 WebP thumbnails, 128 px wide, under `assets/reference/conversation-archive/` |
-| Current production pack | 11 PNG masters and 11 matching WebP derivatives under `assets/production/` |
-| Production manifest | 11 entries; every referenced PNG and WebP exists |
-| Application integration | 11 unique production keys used across 34 `<img>` placements |
+| Current production pack | 17 manifest assets / 38 managed files, including editable PNG masters and responsive WebP derivatives |
+| Production manifest | Schema v2; provenance, dimensions, hashes, alpha, budgets, lifecycle, scenes, and runtime keys verified |
+| Application integration | 17 unique production keys used across 44 `<img>` placements |
 | Reference isolation | No archive reference or contact-sheet image is imported by application code |
-| Current optimized payload | Approximately 2.2 MB across the 11 unique WebP files |
+| Current optimized payload | 3,207,498 bytes across 21 emitted WebP files, including four responsive 768 px sources |
 
-The current production pack is useful and valid, but it is a newly prepared scene-ready set rather than a one-to-one conversion of all 21 archived PNGs.
+The production pack is a curated scene-ready set, not a one-to-one conversion of all 21 archived PNGs. Broad concepts and multi-asset boards remain reference-only by design.
 
 ## 3. Source disposition
 
@@ -140,6 +140,8 @@ Each production entry should record:
 
 ### Phase 1 — create the source and candidate ledger
 
+**State:** Complete.
+
 - Create a ledger covering every archive ID from `00` through `20`.
 - For boards `03`–`17`, record every distinct concept once and list duplicate appearances separately.
 - Mark each candidate `direct-convert`, `extract`, `regenerate`, or `reject`.
@@ -152,6 +154,8 @@ Each production entry should record:
 
 ### Phase 2 — convert the standalone cinematic originals
 
+**State:** Complete.
+
 - Produce responsive WebP derivatives from `01` and `02` without resizing above source resolution.
 - Match crop, exposure, color, and horizon position so the scenes can transition without a visible jump.
 - Store development copies under `assets/production/cinematic/` while preserving source provenance in the manifest.
@@ -160,6 +164,8 @@ Each production entry should record:
 **Gate:** Both scenes pass visual continuity, size-budget, and responsive-crop checks.
 
 ### Phase 3 — prepare individual lotus and water components
+
+**State:** Complete with the structural and extra depth families explicitly deferred because no approved scene owns them.
 
 - Work through the approved ledger one asset at a time.
 - Attempt direct extraction only when the contact-sheet rule passes.
@@ -171,6 +177,8 @@ Each production entry should record:
 
 ### Phase 4 — update the production pipeline
 
+**State:** Complete.
+
 - Extend `assets/production/manifest.json` with dimensions, alpha, byte size, provenance, scene assignment, and lifecycle status.
 - Extend `src/assets.ts` only with approved assets.
 - Add an automated verification script to detect missing files, unmanifested files, orphaned imports, accidental reference imports, hash failures, and invalid alpha expectations.
@@ -179,6 +187,8 @@ Each production entry should record:
 **Gate:** Verification reports no missing, orphaned, or reference-sourced production imports.
 
 ### Phase 5 — integrate by scene and fix loading behavior
+
+**State:** Complete.
 
 - Hero: load the opening bud immediately and preload only the next required bloom state.
 - Below-fold chapters: use lazy or intersection-based loading instead of assigning all image sources at startup.
@@ -190,6 +200,8 @@ Each production entry should record:
 **Gate:** No broken images; correct hero state; correct scene handoffs; no reference boards in the network payload; below-fold assets do not compete with the hero load.
 
 ### Phase 6 — verification and deployment
+
+**State:** Complete.
 
 - Run archive completeness and SHA-256 checks.
 - Run production-manifest and import-coverage checks.

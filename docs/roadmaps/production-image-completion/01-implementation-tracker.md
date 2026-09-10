@@ -28,7 +28,7 @@ Statuses: `READY`, `IN PROGRESS`, `BLOCKED`, `VERIFIED`, `DEFERRED`.
 | `S05.4` | Reduced/static fallback parity | `S05.3` | High | VERIFIED | `evidence/S05.4-fallback.md` |
 | `S06.1` | Hash, asset, type, and build checks | `S05` | High | VERIFIED | `evidence/S06.1-local-gates.md` |
 | `S06.2` | 1440/1024/390 browser evidence | `S06.1` | High | VERIFIED | `evidence/S06.2-browser.md` |
-| `S06.3` | CI and live Pages verification | `S06.2` | Critical | IN PROGRESS | `evidence/S06.3-release.md` |
+| `S06.3` | CI and live Pages verification | `S06.2` | Critical | VERIFIED | `evidence/S06.3-release.md` |
 
 ## Parent roll-up
 
@@ -40,4 +40,4 @@ Statuses: `READY`, `IN PROGRESS`, `BLOCKED`, `VERIFIED`, `DEFERRED`.
 | `S03` | All required `S03.*` verified or explicitly deferred | VERIFIED |
 | `S04` | `S04.1`–`S04.3` verified | VERIFIED |
 | `S05` | `S05.1`–`S05.4` verified | VERIFIED |
-| `S06` | `S06.1`–`S06.3` verified | IN PROGRESS |
+| `S06` | `S06.1`–`S06.3` verified | VERIFIED |

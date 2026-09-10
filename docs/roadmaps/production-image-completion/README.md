@@ -54,7 +54,7 @@ S06 Verification and release
 
 ## Current checkpoint
 
-See [the tracker](./01-implementation-tracker.md) for the only authoritative slice status. Local gates and the nine-cell browser matrix are verified; `S06.3` is the active critical release slice.
+See [the tracker](./01-implementation-tracker.md) for the authoritative slice status. All required slices are verified, the conscious deferrals are recorded, and the release is live on GitHub Pages.
 
 ## Files
 

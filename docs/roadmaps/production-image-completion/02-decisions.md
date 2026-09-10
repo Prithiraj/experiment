@@ -11,3 +11,4 @@
 | `D007` | Track editable production masters and import only optimized derivatives in the web app. | Masters support future iteration; derivatives protect loading performance. | Accepted |
 | `D008` | Require a critical release gate after local and browser verification. | Deployment should promote an already verified revision, not serve as the test environment. | Accepted |
 | `D009` | Expose deterministic `?motion=reduced` and `?motion=fallback` verification profiles. | Native reduced-motion remains honored while repeatable browser checks can exercise both non-animated paths independently of the test machine. | Accepted |
+| `D010` | Promote revision `08541ea9f164905db3764c51339b874c6c127c61` after all local and browser gates passed. | The remote had no divergent commits, the worktree was clean, and both the independent build and Pages workflows could verify the same reviewed release. | Accepted |
