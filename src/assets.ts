@@ -2,7 +2,9 @@ import cinematicBloom from '../assets/production/cinematic/cinematic-lotus-bloom
 import cinematicBloom768 from '../assets/production/cinematic/cinematic-lotus-bloom-pond-768.webp';
 import cinematicBud from '../assets/production/cinematic/cinematic-lotus-bud-pond.webp';
 import cinematicBud768 from '../assets/production/cinematic/cinematic-lotus-bud-pond-768.webp';
+import lotusEarly from '../assets/production/lotus/lotus-bloom-early-open.webp';
 import lotusBloom from '../assets/production/lotus/lotus-bloom-full.webp';
+import lotusHalf from '../assets/production/lotus/lotus-bloom-half-open.webp';
 import lotusBud from '../assets/production/lotus/lotus-bud.webp';
 import lotusLeaf from '../assets/production/lotus/lotus-leaf-foreground.webp';
 import lotusWater from '../assets/production/water/lotus-water-plate.webp';
@@ -23,6 +25,8 @@ export const productionAssets = {
   cinematicBud,
   lotusBloom,
   lotusBud,
+  lotusEarly,
+  lotusHalf,
   lotusLeaf,
   lotusWater,
   petal01,

@@ -56,6 +56,7 @@ button:focus-visible,a:focus-visible{outline:3px solid var(--fuchsia-500);outlin
 .hero-bouquet__image,.hero-bouquet__leaf,.field-image,.axis-flower,.vortex-image,.return-bloom{display:block;position:absolute;object-fit:contain;pointer-events:none}
 .hero-bouquet__image{inset:6% 0 4%;width:100%;height:90%;z-index:4;filter:drop-shadow(0 22px 24px rgba(16,43,36,.18));transform-origin:50% 70%}
 .hero-bouquet__bud{opacity:1;transform:scale(.94)}
+.hero-bouquet__early,.hero-bouquet__half{opacity:0;transform:scale(.88)}
 .hero-bouquet__bloom{opacity:0;transform:scale(.84)}
 .hero-bouquet__leaf{z-index:3;left:4%;bottom:12%;width:40%;height:34%;transform:rotate(-10deg);filter:drop-shadow(0 16px 18px rgba(16,43,36,.18))}
 .petal--image{width:clamp(34px,7vw,92px);height:auto;aspect-ratio:auto;border-radius:0;background:transparent;box-shadow:none;object-fit:contain;transform:translate(-50%,-50%) rotate(var(--pr,0deg))}
@@ -94,5 +95,5 @@ button:focus-visible,a:focus-visible{outline:3px solid var(--fuchsia-500);outlin
   .return-bloom{width:220px;height:180px}
 }
 
-html[data-motion="reduced"] .hero-bouquet__bud{opacity:0}
+html[data-motion="reduced"] .hero-bouquet__bud,html[data-motion="reduced"] .hero-bouquet__early,html[data-motion="reduced"] .hero-bouquet__half{opacity:0}
 html[data-motion="reduced"] .hero-bouquet__bloom{opacity:1;transform:none}

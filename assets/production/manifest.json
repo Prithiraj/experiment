@@ -49,9 +49,10 @@
       "id": "lotus-bloom-early-open",
       "category": "lotus",
       "role": "early-open bloom progression actor",
-      "status": "approved",
+      "status": "integrated",
       "source": { "kind": "generated", "path": "assets/reference/generated-sources/lotus-bloom-early-open-chroma.png", "sha256": "e9093a9a85419fe61ebacb2b4746d3e1349988ee31577583f7b1f33df7a5f226" },
       "scenes": ["release", "bloom-chapter"],
+      "runtime": { "key": "lotusEarly", "path": "lotus/lotus-bloom-early-open.webp" },
       "master": { "path": "lotus/lotus-bloom-early-open.png", "width": 1254, "height": 1254, "bytes": 1224267, "sha256": "e4574150af94127477cc639dc46966d90dfaec5bfed4c19da0c6faf923c30e45", "alpha": true },
       "derivatives": [
         { "label": "default", "path": "lotus/lotus-bloom-early-open.webp", "width": 1254, "height": 1254, "bytes": 120436, "sha256": "9f01b5ac2c7dcdbb3816099c4e407d4f0c94fb226189774af4710828ab3f5584", "alpha": true, "budgetBytes": 250000 }
@@ -61,9 +62,10 @@
       "id": "lotus-bloom-half-open",
       "category": "lotus",
       "role": "half-open bloom progression actor",
-      "status": "approved",
+      "status": "integrated",
       "source": { "kind": "generated", "path": "assets/reference/generated-sources/lotus-bloom-half-open-chroma.png", "sha256": "5489899f86e43b0f3296354341e48ec8bb4ff3cfdea068768d93856b51dbdbb7" },
       "scenes": ["release", "bloom-chapter"],
+      "runtime": { "key": "lotusHalf", "path": "lotus/lotus-bloom-half-open.webp" },
       "master": { "path": "lotus/lotus-bloom-half-open.png", "width": 1254, "height": 1254, "bytes": 1406531, "sha256": "14cf43c7891b9cad064b724ff9ff6e800dc24b6efcd0889305dc90b2255deb92", "alpha": true },
       "derivatives": [
         { "label": "default", "path": "lotus/lotus-bloom-half-open.webp", "width": 1254, "height": 1254, "bytes": 140112, "sha256": "d0790d16e1ce59a116ab23ae9fc36eab6571ec5908abf11842472d9fc16bd545", "alpha": true, "budgetBytes": 250000 }

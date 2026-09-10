@@ -54,7 +54,7 @@ S06 Verification and release
 
 ## Current checkpoint
 
-See [the tracker](./01-implementation-tracker.md) for the only authoritative slice status. The responsive cinematic handoff is verified; `S05.3` is the active lotus-state motion slice.
+See [the tracker](./01-implementation-tracker.md) for the only authoritative slice status. The four-state motion sequence is verified; `S05.4` is the active fallback-parity slice.
 
 ## Files
 

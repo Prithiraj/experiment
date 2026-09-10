@@ -56,8 +56,10 @@
 
         <div class="hero-bouquet" data-bouquet aria-hidden="true">
           <div class="bouquet-halo"></div>
-          <img class="hero-bouquet__image hero-bouquet__bud" data-production-image="lotusBud" data-asset-loading="critical" data-lotus-bud data-release-actor alt="" />
-          <img class="hero-bouquet__image hero-bouquet__bloom" data-production-image="lotusBloom" data-asset-loading="preload" data-asset-sequence="0" data-lotus-bloom data-release-actor alt="" />
+          <img class="hero-bouquet__image hero-bouquet__bud" data-production-image="lotusBud" data-asset-loading="critical" data-lotus-state="bud" alt="" />
+          <img class="hero-bouquet__image hero-bouquet__early" data-production-image="lotusEarly" data-asset-loading="preload" data-asset-sequence="0" data-lotus-state="early" alt="" />
+          <img class="hero-bouquet__image hero-bouquet__half" data-production-image="lotusHalf" data-asset-loading="sequence" data-asset-sequence="1" data-lotus-state="half" alt="" />
+          <img class="hero-bouquet__image hero-bouquet__bloom" data-production-image="lotusBloom" data-asset-loading="sequence" data-asset-sequence="2" data-lotus-state="full" alt="" />
           <img class="hero-bouquet__leaf" data-production-image="lotusLeaf" data-asset-loading="visible" data-release-actor alt="" />
         </div>
 
@@ -79,6 +81,12 @@
           <img class="lotus-chapter__scene lotus-chapter__scene--reflection" data-production-image="waterReflection" data-asset-loading="deferred" data-bloom-plate="reflection" alt="" />
           <img class="lotus-chapter__scene lotus-chapter__scene--open" data-production-image="cinematicBloom" data-asset-loading="deferred" data-bloom-plate="open" alt="" />
           <img class="lotus-chapter__ripple" data-production-image="waterRipple" data-asset-loading="deferred" data-bloom-ripple alt="" />
+        </div>
+        <div class="lotus-chapter__states" aria-hidden="true">
+          <img data-production-image="lotusBud" data-asset-loading="deferred" data-bloom-state="bud" alt="" />
+          <img data-production-image="lotusEarly" data-asset-loading="deferred" data-bloom-state="early" alt="" />
+          <img data-production-image="lotusHalf" data-asset-loading="deferred" data-bloom-state="half" alt="" />
+          <img data-production-image="lotusBloom" data-asset-loading="deferred" data-bloom-state="full" alt="" />
         </div>
         <div class="lotus-chapter__veil" aria-hidden="true"></div>
         <div class="lotus-chapter__copy">

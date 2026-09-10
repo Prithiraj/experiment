@@ -38,8 +38,10 @@ export function initReleaseHero(): () => void {
   if (!hero) return () => undefined;
 
   const bouquet = hero.querySelector<HTMLElement>('[data-bouquet]');
-  const bud = hero.querySelector<HTMLElement>('[data-lotus-bud]');
-  const bloom = hero.querySelector<HTMLElement>('[data-lotus-bloom]');
+  const bud = hero.querySelector<HTMLElement>('[data-lotus-state="bud"]');
+  const early = hero.querySelector<HTMLElement>('[data-lotus-state="early"]');
+  const half = hero.querySelector<HTMLElement>('[data-lotus-state="half"]');
+  const bloom = hero.querySelector<HTMLElement>('[data-lotus-state="full"]');
   const actors = gsap.utils.toArray<HTMLElement>('[data-release-actor]', hero);
   const accentLine = hero.querySelector<HTMLElement>('.hero-line--accent');
   const split = accentLine ? splitHeroGlyphs(accentLine) : null;
@@ -67,10 +69,14 @@ export function initReleaseHero(): () => void {
       .to('.hero-intro, .hero-actions', { y: 36, opacity: 0, duration: 0.48 }, 0.18)
       .to('.scroll-cue', { y: 24, opacity: 0, duration: 0.28 }, 0.02);
 
-    if (bud && bloom) {
+    if (bud && early && half && bloom) {
       timeline
-        .to(bud, { opacity: 0, scale: 0.82, duration: 0.42 }, 0.2)
-        .to(bloom, { opacity: 1, scale: 1, duration: 0.48 }, 0.25);
+        .to(bud, { opacity: 0, scale: 0.88, duration: 0.06 }, 0.22)
+        .to(early, { opacity: 1, scale: 0.96, duration: 0.06 }, 0.28)
+        .to(early, { opacity: 0, scale: 1.01, duration: 0.06 }, 0.4)
+        .to(half, { opacity: 1, scale: 0.98, duration: 0.06 }, 0.46)
+        .to(half, { opacity: 0, scale: 1.025, duration: 0.06 }, 0.58)
+        .to(bloom, { opacity: 1, scale: 1, duration: 0.06 }, 0.64);
     }
 
     actors.forEach((actor, index) => {

@@ -290,6 +290,8 @@ async function main() {
     else knownIds.add(asset.id);
 
     if (!allowedStatuses.has(asset.status)) addError(`${asset.id}: invalid status ${asset.status}`);
+    if (asset.status === 'integrated' && !asset.runtime) addError(`${asset.id}: integrated asset has no runtime mapping`);
+    if (asset.status === 'approved' && asset.runtime) addError(`${asset.id}: approved asset must become integrated before runtime use`);
     if (!asset.role || !asset.category || !Array.isArray(asset.scenes) || asset.scenes.length === 0) {
       addError(`${asset.id}: missing category, role, or scene ownership`);
     }

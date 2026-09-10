@@ -24,8 +24,8 @@ Statuses: `READY`, `IN PROGRESS`, `BLOCKED`, `VERIFIED`, `DEFERRED`.
 | `S04.3` | Import/orphan/reference guards | `S04.2` | Medium | VERIFIED | `evidence/S04.3-guards.md` |
 | `S05.1` | Priority/deferred loading behavior | `S04` | High | VERIFIED | `evidence/S05.1-loading.md` |
 | `S05.2` | Responsive cinematic handoff | `S05.1` | High | VERIFIED | `evidence/S05.2-cinematic.md` |
-| `S05.3` | Approved component states in motion chapters | `S05.2` | High | IN PROGRESS | `evidence/S05.3-motion.md` |
-| `S05.4` | Reduced/static fallback parity | `S05.3` | High | READY | `evidence/S05.4-fallback.md` |
+| `S05.3` | Approved component states in motion chapters | `S05.2` | High | VERIFIED | `evidence/S05.3-motion.md` |
+| `S05.4` | Reduced/static fallback parity | `S05.3` | High | IN PROGRESS | `evidence/S05.4-fallback.md` |
 | `S06.1` | Hash, asset, type, and build checks | `S05` | High | READY | `evidence/S06.1-local-gates.md` |
 | `S06.2` | 1440/1024/390 browser evidence | `S06.1` | High | READY | `evidence/S06.2-browser.md` |
 | `S06.3` | CI and live Pages verification | `S06.2` | Critical | READY | `evidence/S06.3-release.md` |

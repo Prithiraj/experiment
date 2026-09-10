@@ -12,10 +12,16 @@ export function initBloomChapter(): () => void {
   const open = chapter.querySelector<HTMLElement>('[data-bloom-plate="open"]');
   const ripple = chapter.querySelector<HTMLElement>('[data-bloom-ripple]');
   const copy = chapter.querySelector<HTMLElement>('.lotus-chapter__copy');
+  const stateBud = chapter.querySelector<HTMLElement>('[data-bloom-state="bud"]');
+  const stateEarly = chapter.querySelector<HTMLElement>('[data-bloom-state="early"]');
+  const stateHalf = chapter.querySelector<HTMLElement>('[data-bloom-state="half"]');
+  const stateFull = chapter.querySelector<HTMLElement>('[data-bloom-state="full"]');
+  const states = [stateBud, stateEarly, stateHalf, stateFull];
 
   const context = gsap.context(() => {
     gsap.set([reflection, open, ripple], { opacity: 0 });
     gsap.set(bud, { opacity: 1, scale: 1 });
+    gsap.set(states, { opacity: 0, scale: 0.9, transformOrigin: '50% 72%' });
 
     const timeline = gsap.timeline({
       defaults: { ease: 'none' },
@@ -34,10 +40,18 @@ export function initBloomChapter(): () => void {
       .to(bud, { scale: 1.035, duration: 0.34 }, 0)
       .to(bud, { opacity: 0, duration: 0.2 }, 0.18)
       .to(reflection, { opacity: 1, scale: 1.025, duration: 0.28 }, 0.17)
+      .to(stateBud, { opacity: 1, scale: 0.94, duration: 0.04 }, 0.2)
+      .to(stateBud, { opacity: 0, scale: 1, duration: 0.04 }, 0.28)
+      .to(stateEarly, { opacity: 1, scale: 0.96, duration: 0.04 }, 0.32)
+      .to(stateEarly, { opacity: 0, scale: 1.015, duration: 0.04 }, 0.4)
+      .to(stateHalf, { opacity: 1, scale: 0.98, duration: 0.04 }, 0.44)
+      .to(stateHalf, { opacity: 0, scale: 1.025, duration: 0.04 }, 0.52)
+      .to(stateFull, { opacity: 1, scale: 1, duration: 0.04 }, 0.56)
       .to(ripple, { opacity: 0.58, scale: 1.04, duration: 0.42 }, 0.28)
       .to(copy, { y: -18, duration: 0.28 }, 0.28)
       .to(reflection, { opacity: 0, duration: 0.24 }, 0.66)
       .to(open, { opacity: 1, scale: 1.025, duration: 0.28 }, 0.64)
+      .to(stateFull, { opacity: 0, scale: 1.045, duration: 0.18 }, 0.66)
       .to(ripple, { opacity: 0, scale: 1.09, duration: 0.22 }, 0.7)
       .to(open, { scale: 1.055, duration: 0.22 }, 0.78);
   }, chapter);
