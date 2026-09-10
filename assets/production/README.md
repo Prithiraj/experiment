@@ -12,3 +12,5 @@ These are individually usable image assets for the current Zero-G Bloom producti
 | `orbit/` | `orbit-wild-signal`, `orbit-citrus-orbit`, `orbit-violet-noise`, `orbit-quiet-moon` | Orbital collection cards and stable shop cards |
 
 The broad conversation boards and contact sheets remain under `assets/reference/`; none are used as production UI imagery. The source-to-derivative mapping used by the application lives in `src/assets.ts`.
+
+`cinematic/` contains byte-identical development copies of the two standalone archived pond scenes plus 1536 px and 768 px WebP derivatives. Their archive IDs and source hashes are recorded in the production-image slice evidence and production manifest.
