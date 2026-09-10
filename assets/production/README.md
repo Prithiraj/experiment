@@ -16,3 +16,5 @@ The broad conversation boards and contact sheets remain under `assets/reference/
 `cinematic/` contains byte-identical development copies of the two standalone archived pond scenes plus 1536 px and 768 px WebP derivatives. Their archive IDs and source hashes are recorded in the production-image slice evidence and production manifest.
 
 The lotus chapter adds individually generated early-open and half-open cutouts, each with a transparent PNG master and optimized WebP. The water pack adds a responsive reflection plate and a black-backed ripple overlay intended for `mix-blend-mode: screen` compositing.
+
+`manifest.json` is the production source of truth. Run `npm run verify:assets` for portable repository checks or `npm run verify:assets:local` when the ignored archive originals are present and their source hashes must also be enforced.

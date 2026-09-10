@@ -1,17 +1,228 @@
 {
-  "iteration": "zero-g-bloom-production-01",
-  "sourcePolicy": "PNG masters are preserved locally; WebP derivatives are shipped.",
+  "schemaVersion": 2,
+  "iteration": "zero-g-bloom-production-02",
+  "pathBase": "assets/production",
+  "sourcePolicy": "Archive and generated sources are preserved; editable PNG masters remain tracked; runtime code imports approved WebP derivatives only.",
   "assets": [
-    { "id": "lotus-bud", "master": "lotus/lotus-bud.png", "web": "lotus/lotus-bud.webp", "role": "hero opening state, field actor" },
-    { "id": "lotus-bloom-full", "master": "lotus/lotus-bloom-full.png", "web": "lotus/lotus-bloom-full.webp", "role": "hero release state, field and return actor" },
-    { "id": "lotus-leaf-foreground", "master": "lotus/lotus-leaf-foreground.png", "web": "lotus/lotus-leaf-foreground.webp", "role": "supporting botanical actor" },
-    { "id": "lotus-petal-floating-01", "master": "petal-field/lotus-petal-floating-01.png", "web": "petal-field/lotus-petal-floating-01.webp", "role": "floating petal actor" },
-    { "id": "lotus-petal-floating-02", "master": "petal-field/lotus-petal-floating-02.png", "web": "petal-field/lotus-petal-floating-02.webp", "role": "floating petal actor" },
-    { "id": "lotus-petal-floating-03", "master": "petal-field/lotus-petal-floating-03.png", "web": "petal-field/lotus-petal-floating-03.webp", "role": "floating petal actor" },
-    { "id": "lotus-water-plate", "master": "water/lotus-water-plate.png", "web": "water/lotus-water-plate.webp", "role": "zero-G atmospheric plate" },
-    { "id": "orbit-wild-signal", "master": "orbit/orbit-wild-signal.png", "web": "orbit/orbit-wild-signal.webp", "role": "collection and shop product art" },
-    { "id": "orbit-citrus-orbit", "master": "orbit/orbit-citrus-orbit.png", "web": "orbit/orbit-citrus-orbit.webp", "role": "collection and shop product art" },
-    { "id": "orbit-violet-noise", "master": "orbit/orbit-violet-noise.png", "web": "orbit/orbit-violet-noise.webp", "role": "collection and shop product art" },
-    { "id": "orbit-quiet-moon", "master": "orbit/orbit-quiet-moon.png", "web": "orbit/orbit-quiet-moon.webp", "role": "collection and shop product art" }
+    {
+      "id": "cinematic-lotus-bud-pond",
+      "category": "cinematic",
+      "role": "closed-bud pond scene",
+      "status": "approved",
+      "source": { "kind": "archive-direct", "archiveId": "01", "path": "assets/reference/conversation-archive-originals/zero_g_bloom_generated_assets/01_lotus-bud-cinematic.png", "sha256": "55c7f8102298c34186702c1a854e5d02ee0df95f1afb0d4ea3761e12d4de1257" },
+      "scenes": ["release", "bloom-chapter"],
+      "master": { "path": "cinematic/cinematic-lotus-bud-pond.png", "width": 1536, "height": 1024, "bytes": 1984931, "sha256": "55c7f8102298c34186702c1a854e5d02ee0df95f1afb0d4ea3761e12d4de1257", "alpha": true },
+      "derivatives": [
+        { "label": "1536", "path": "cinematic/cinematic-lotus-bud-pond.webp", "width": 1536, "height": 1024, "bytes": 340020, "sha256": "a65d334f52dab981d60de21c13571dc764fec92661603359458b0ecd9733d6e0", "alpha": true, "budgetBytes": 450000 },
+        { "label": "768", "path": "cinematic/cinematic-lotus-bud-pond-768.webp", "width": 768, "height": 512, "bytes": 69198, "sha256": "d90e357586d2743d0cda9de62ba3084ccf3233751683cc55c362908ab54d7e10", "alpha": true, "budgetBytes": 150000 }
+      ]
+    },
+    {
+      "id": "cinematic-lotus-bloom-pond",
+      "category": "cinematic",
+      "role": "full-bloom pond scene",
+      "status": "approved",
+      "source": { "kind": "archive-direct", "archiveId": "02", "path": "assets/reference/conversation-archive-originals/zero_g_bloom_generated_assets/02_lotus-full-bloom-cinematic.png", "sha256": "d80753ff94c6ec851ddbc6f33ff259a5e6bd90470b1e6723d52a267f9045b688" },
+      "scenes": ["bloom-chapter"],
+      "master": { "path": "cinematic/cinematic-lotus-bloom-pond.png", "width": 1536, "height": 1024, "bytes": 2016232, "sha256": "d80753ff94c6ec851ddbc6f33ff259a5e6bd90470b1e6723d52a267f9045b688", "alpha": false },
+      "derivatives": [
+        { "label": "1536", "path": "cinematic/cinematic-lotus-bloom-pond.webp", "width": 1536, "height": 1024, "bytes": 112148, "sha256": "82d5bb9c06acccb2cecff127b88f4e07c5805645b7b65b2870ffaa729e216314", "alpha": false, "budgetBytes": 450000 },
+        { "label": "768", "path": "cinematic/cinematic-lotus-bloom-pond-768.webp", "width": 768, "height": 512, "bytes": 37930, "sha256": "bf5c943b16124a3f0c6ba76afca4e55b0ce2af60916b9c96b2349dee250b1cfb", "alpha": false, "budgetBytes": 150000 }
+      ]
+    },
+    {
+      "id": "lotus-bud",
+      "category": "lotus",
+      "role": "closed-bud actor",
+      "status": "integrated",
+      "source": { "kind": "generated", "reference": "zero-g-bloom-production-01" },
+      "scenes": ["release", "zero-field", "axis", "vortex"],
+      "runtime": { "key": "lotusBud", "path": "lotus/lotus-bud.webp" },
+      "master": { "path": "lotus/lotus-bud.png", "width": 1254, "height": 1254, "bytes": 783449, "sha256": "9dd5876ff265b86e9dad4cdb0052178e3889ba8f51ac7bc7075b5b1ec6aac2d7", "alpha": true },
+      "derivatives": [
+        { "label": "default", "path": "lotus/lotus-bud.webp", "width": 1200, "height": 1200, "bytes": 95606, "sha256": "fbe62361afc34d4c6150a41689037fb1c81a4ae18581b5585eb611686b8238da", "alpha": true, "budgetBytes": 250000 }
+      ]
+    },
+    {
+      "id": "lotus-bloom-early-open",
+      "category": "lotus",
+      "role": "early-open bloom progression actor",
+      "status": "approved",
+      "source": { "kind": "generated", "path": "assets/reference/generated-sources/lotus-bloom-early-open-chroma.png", "sha256": "e9093a9a85419fe61ebacb2b4746d3e1349988ee31577583f7b1f33df7a5f226" },
+      "scenes": ["release", "bloom-chapter"],
+      "master": { "path": "lotus/lotus-bloom-early-open.png", "width": 1254, "height": 1254, "bytes": 1224267, "sha256": "e4574150af94127477cc639dc46966d90dfaec5bfed4c19da0c6faf923c30e45", "alpha": true },
+      "derivatives": [
+        { "label": "default", "path": "lotus/lotus-bloom-early-open.webp", "width": 1254, "height": 1254, "bytes": 120436, "sha256": "9f01b5ac2c7dcdbb3816099c4e407d4f0c94fb226189774af4710828ab3f5584", "alpha": true, "budgetBytes": 250000 }
+      ]
+    },
+    {
+      "id": "lotus-bloom-half-open",
+      "category": "lotus",
+      "role": "half-open bloom progression actor",
+      "status": "approved",
+      "source": { "kind": "generated", "path": "assets/reference/generated-sources/lotus-bloom-half-open-chroma.png", "sha256": "5489899f86e43b0f3296354341e48ec8bb4ff3cfdea068768d93856b51dbdbb7" },
+      "scenes": ["release", "bloom-chapter"],
+      "master": { "path": "lotus/lotus-bloom-half-open.png", "width": 1254, "height": 1254, "bytes": 1406531, "sha256": "14cf43c7891b9cad064b724ff9ff6e800dc24b6efcd0889305dc90b2255deb92", "alpha": true },
+      "derivatives": [
+        { "label": "default", "path": "lotus/lotus-bloom-half-open.webp", "width": 1254, "height": 1254, "bytes": 140112, "sha256": "d0790d16e1ce59a116ab23ae9fc36eab6571ec5908abf11842472d9fc16bd545", "alpha": true, "budgetBytes": 250000 }
+      ]
+    },
+    {
+      "id": "lotus-bloom-full",
+      "category": "lotus",
+      "role": "full-bloom actor",
+      "status": "integrated",
+      "source": { "kind": "generated", "reference": "zero-g-bloom-production-01" },
+      "scenes": ["release", "zero-field", "axis", "vortex", "return"],
+      "runtime": { "key": "lotusBloom", "path": "lotus/lotus-bloom-full.webp" },
+      "master": { "path": "lotus/lotus-bloom-full.png", "width": 1254, "height": 1254, "bytes": 1709424, "sha256": "c55792de7adb8ff6fb2a4af32978d769f6c5c5e65630baaf68d18103595df080", "alpha": true },
+      "derivatives": [
+        { "label": "default", "path": "lotus/lotus-bloom-full.webp", "width": 1200, "height": 1200, "bytes": 200262, "sha256": "bebb6168e2694736fe15d0b849eab0fac0e381e776a729041d0e0434f9601df5", "alpha": true, "budgetBytes": 250000 }
+      ]
+    },
+    {
+      "id": "lotus-leaf-foreground",
+      "category": "lotus",
+      "role": "supporting botanical depth actor",
+      "status": "integrated",
+      "source": { "kind": "generated", "reference": "zero-g-bloom-production-01" },
+      "scenes": ["release", "zero-field", "axis", "vortex"],
+      "runtime": { "key": "lotusLeaf", "path": "lotus/lotus-leaf-foreground.webp" },
+      "master": { "path": "lotus/lotus-leaf-foreground.png", "width": 1254, "height": 1254, "bytes": 1584104, "sha256": "7c89099939cd5421a0759d1dc346de2054b107b1cd57d851da5957aaa5b42144", "alpha": true },
+      "derivatives": [
+        { "label": "default", "path": "lotus/lotus-leaf-foreground.webp", "width": 1200, "height": 1200, "bytes": 177184, "sha256": "3f1e58536f17a2fd27635cfba181d923eb209eb76184ab65ebcdf19973fa7c02", "alpha": true, "budgetBytes": 250000 }
+      ]
+    },
+    {
+      "id": "lotus-petal-floating-01",
+      "category": "petal-field",
+      "role": "floating petal actor",
+      "status": "integrated",
+      "source": { "kind": "generated", "reference": "zero-g-bloom-production-01" },
+      "scenes": ["release", "zero-field", "vortex"],
+      "runtime": { "key": "petal01", "path": "petal-field/lotus-petal-floating-01.webp" },
+      "master": { "path": "petal-field/lotus-petal-floating-01.png", "width": 1254, "height": 1254, "bytes": 1128977, "sha256": "d69a4b193a91df857dc6d06c6055b27e29ed85882f8b974eea50b065caedfdca", "alpha": true },
+      "derivatives": [
+        { "label": "default", "path": "petal-field/lotus-petal-floating-01.webp", "width": 800, "height": 800, "bytes": 39134, "sha256": "1c2aac2becde055c6f9e04690b54ba175e8865359dd7cb29cd4bcc802e253e0d", "alpha": true, "budgetBytes": 80000 }
+      ]
+    },
+    {
+      "id": "lotus-petal-floating-02",
+      "category": "petal-field",
+      "role": "floating petal actor",
+      "status": "integrated",
+      "source": { "kind": "generated", "reference": "zero-g-bloom-production-01" },
+      "scenes": ["release", "zero-field"],
+      "runtime": { "key": "petal02", "path": "petal-field/lotus-petal-floating-02.webp" },
+      "master": { "path": "petal-field/lotus-petal-floating-02.png", "width": 1254, "height": 1254, "bytes": 899908, "sha256": "3a9696fff79778df780f4fd58271bf0fdb6945a65ddcc5952d6fa16bcd20c205", "alpha": true },
+      "derivatives": [
+        { "label": "default", "path": "petal-field/lotus-petal-floating-02.webp", "width": 800, "height": 800, "bytes": 43400, "sha256": "15147dec911710b9574f71126ea9489a5a546df96cfe2dc81f945c43b0e60b88", "alpha": true, "budgetBytes": 80000 }
+      ]
+    },
+    {
+      "id": "lotus-petal-floating-03",
+      "category": "petal-field",
+      "role": "floating petal actor",
+      "status": "integrated",
+      "source": { "kind": "generated", "reference": "zero-g-bloom-production-01" },
+      "scenes": ["release", "vortex"],
+      "runtime": { "key": "petal03", "path": "petal-field/lotus-petal-floating-03.webp" },
+      "master": { "path": "petal-field/lotus-petal-floating-03.png", "width": 1254, "height": 1254, "bytes": 1262544, "sha256": "b0b233e56ef99ae7d818b4391a95b20209a4389fb0a75356833a5e3844ae24b6", "alpha": true },
+      "derivatives": [
+        { "label": "default", "path": "petal-field/lotus-petal-floating-03.webp", "width": 800, "height": 800, "bytes": 61698, "sha256": "fea7b1c672f384068ce4a1d802b44b5abcea1316fc623995acdbb67d130dc49c", "alpha": true, "budgetBytes": 80000 }
+      ]
+    },
+    {
+      "id": "lotus-water-plate",
+      "category": "water",
+      "role": "zero-gravity atmospheric plate",
+      "status": "integrated",
+      "source": { "kind": "generated", "reference": "zero-g-bloom-production-01" },
+      "scenes": ["zero-field"],
+      "runtime": { "key": "lotusWater", "path": "water/lotus-water-plate.webp" },
+      "master": { "path": "water/lotus-water-plate.png", "width": 1672, "height": 941, "bytes": 1486593, "sha256": "cbdd9e6009b7ff2fea005597559b8ca7493412aaeb4e293287110c67071417aa", "alpha": false },
+      "derivatives": [
+        { "label": "default", "path": "water/lotus-water-plate.webp", "width": 1672, "height": 941, "bytes": 57580, "sha256": "ef81834a639e772870ff6c869fbc86eeadf3cdc70661a0dd4f28c5bcc0d09cb4", "alpha": false, "budgetBytes": 450000 }
+      ]
+    },
+    {
+      "id": "lotus-water-reflection-plate",
+      "category": "water",
+      "role": "bloom transition reflection plate",
+      "status": "approved",
+      "source": { "kind": "generated", "path": "assets/reference/generated-sources/lotus-water-reflection-plate-source.png", "sha256": "5e29fa304c1a1e5f0dbbfd905700797b3bd20a48a8d8708ef67159c1fe4f001c" },
+      "scenes": ["bloom-chapter"],
+      "master": { "path": "water/lotus-water-reflection-plate.png", "width": 1536, "height": 1024, "bytes": 1804328, "sha256": "5e29fa304c1a1e5f0dbbfd905700797b3bd20a48a8d8708ef67159c1fe4f001c", "alpha": false },
+      "derivatives": [
+        { "label": "1536", "path": "water/lotus-water-reflection-plate.webp", "width": 1536, "height": 1024, "bytes": 70180, "sha256": "e3d575c36908bc8c7628eaebcf32f9dccb5853977e784d1b5e309a193d81d95f", "alpha": false, "budgetBytes": 450000 },
+        { "label": "768", "path": "water/lotus-water-reflection-plate-768.webp", "width": 768, "height": 512, "bytes": 25862, "sha256": "363abe5fc37320d221c51c8178f3bf43ed29f898fd20deccfde49c44e6b08c50", "alpha": false, "budgetBytes": 150000 }
+      ]
+    },
+    {
+      "id": "lotus-water-ripple-overlay",
+      "category": "water",
+      "role": "screen-blend bloom transition ripple",
+      "status": "approved",
+      "blendMode": "screen",
+      "source": { "kind": "generated", "path": "assets/reference/generated-sources/lotus-water-ripple-overlay-source.png", "sha256": "79ca45283865ec09255657bc56b7a492d493d53d5c85ab878c2b4b67cde241dc" },
+      "scenes": ["bloom-chapter"],
+      "master": { "path": "water/lotus-water-ripple-overlay.png", "width": 1536, "height": 1024, "bytes": 670272, "sha256": "79ca45283865ec09255657bc56b7a492d493d53d5c85ab878c2b4b67cde241dc", "alpha": false },
+      "derivatives": [
+        { "label": "1536", "path": "water/lotus-water-ripple-overlay.webp", "width": 1536, "height": 1024, "bytes": 40618, "sha256": "552ea46f30f333db3173be84da6c1798e596abe0baef3a801e6cbc5d720db89d", "alpha": false, "budgetBytes": 150000 },
+        { "label": "768", "path": "water/lotus-water-ripple-overlay-768.webp", "width": 768, "height": 512, "bytes": 14274, "sha256": "668eb060fb774ba41ae910fb2626d524ee3cd08fd18628a0f993a7322697f760", "alpha": false, "budgetBytes": 80000 }
+      ]
+    },
+    {
+      "id": "orbit-wild-signal",
+      "category": "orbit",
+      "role": "collection and shop product art",
+      "status": "integrated",
+      "source": { "kind": "generated", "reference": "zero-g-bloom-production-01" },
+      "scenes": ["orbit", "shop"],
+      "runtime": { "key": "wildSignal", "path": "orbit/orbit-wild-signal.webp" },
+      "master": { "path": "orbit/orbit-wild-signal.png", "width": 1254, "height": 1254, "bytes": 2071468, "sha256": "63eb9f20c0a0602e3756e4bcead5b60f3a9458b27d3645ba88106759c9277427", "alpha": true },
+      "derivatives": [
+        { "label": "default", "path": "orbit/orbit-wild-signal.webp", "width": 1200, "height": 1200, "bytes": 419914, "sha256": "60f258f49efbf090b5674bfd0da8f04eb91ea663905fac376a1ab3e5836b5635", "alpha": true, "budgetBytes": 450000 }
+      ]
+    },
+    {
+      "id": "orbit-citrus-orbit",
+      "category": "orbit",
+      "role": "collection and shop product art",
+      "status": "integrated",
+      "source": { "kind": "generated", "reference": "zero-g-bloom-production-01" },
+      "scenes": ["orbit", "shop"],
+      "runtime": { "key": "citrusOrbit", "path": "orbit/orbit-citrus-orbit.webp" },
+      "master": { "path": "orbit/orbit-citrus-orbit.png", "width": 1254, "height": 1254, "bytes": 2116589, "sha256": "c83168ef1d074f9189e373b75104bfc3630788735e9e0efdf94ab7b64768209b", "alpha": true },
+      "derivatives": [
+        { "label": "default", "path": "orbit/orbit-citrus-orbit.webp", "width": 1200, "height": 1200, "bytes": 421368, "sha256": "6700d62c3556654f4b3529516073a18bd16c3ddb48fbe461150a054c5e156784", "alpha": true, "budgetBytes": 450000 }
+      ]
+    },
+    {
+      "id": "orbit-violet-noise",
+      "category": "orbit",
+      "role": "collection and shop product art",
+      "status": "integrated",
+      "source": { "kind": "generated", "reference": "zero-g-bloom-production-01" },
+      "scenes": ["orbit", "shop"],
+      "runtime": { "key": "violetNoise", "path": "orbit/orbit-violet-noise.webp" },
+      "master": { "path": "orbit/orbit-violet-noise.png", "width": 1254, "height": 1254, "bytes": 2093185, "sha256": "caff01b0177eb3807cd77090c380325613381505dfcfadaf3b318cd60b995934", "alpha": true },
+      "derivatives": [
+        { "label": "default", "path": "orbit/orbit-violet-noise.webp", "width": 1200, "height": 1200, "bytes": 368784, "sha256": "9fe688302e3b8232e71c4f6acab956b697c34bb1e269cedf2f9c82796f49b4d7", "alpha": true, "budgetBytes": 450000 }
+      ]
+    },
+    {
+      "id": "orbit-quiet-moon",
+      "category": "orbit",
+      "role": "collection and shop product art",
+      "status": "integrated",
+      "source": { "kind": "generated", "reference": "zero-g-bloom-production-01" },
+      "scenes": ["orbit", "shop"],
+      "runtime": { "key": "quietMoon", "path": "orbit/orbit-quiet-moon.webp" },
+      "master": { "path": "orbit/orbit-quiet-moon.png", "width": 1254, "height": 1254, "bytes": 1891062, "sha256": "bc87d6384447cf575404e6b2204b62b9535ebfff836c8ba84d7b6566d701828f", "alpha": true },
+      "derivatives": [
+        { "label": "default", "path": "orbit/orbit-quiet-moon.webp", "width": 1200, "height": 1200, "bytes": 351790, "sha256": "6a9b162a25ed830c0d5b518acd10df2ca64e88120199cc15f308f9938bc9ef1a", "alpha": true, "budgetBytes": 450000 }
+      ]
+    }
   ]
 }

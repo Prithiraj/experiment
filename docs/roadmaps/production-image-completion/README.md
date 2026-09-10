@@ -54,7 +54,7 @@ S06 Verification and release
 
 ## Current checkpoint
 
-See [the tracker](./01-implementation-tracker.md) for the only authoritative slice status. `S00` through `S03` are verified; `S04.1` is the active manifest slice.
+See [the tracker](./01-implementation-tracker.md) for the only authoritative slice status. `S00` through `S04` are verified; `S05.1` is the active loading-policy slice.
 
 ## Files
 

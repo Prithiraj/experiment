@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
-    "check": "tsc --noEmit"
+    "check": "npm run verify:assets && tsc --noEmit",
+    "verify:assets": "node scripts/verify-assets.mjs",
+    "verify:assets:local": "node scripts/verify-assets.mjs --require-sources"
   },
   "dependencies": {
     "gsap": "3.15.0"

@@ -19,10 +19,10 @@ Statuses: `READY`, `IN PROGRESS`, `BLOCKED`, `VERIFIED`, `DEFERRED`.
 | `S03.3a` | Reflection plate | `S02.3` | Medium | VERIFIED | `evidence/S03.3a-reflection.md` |
 | `S03.3b` | Ripple plus minimal atmosphere overlays | `S03.3a` | Medium | VERIFIED | `evidence/S03.3b-overlays.md` |
 | `S03.4` | Distinct depth leaves/petals or deferment | `S01.3` | Medium | DEFERRED | `evidence/S03.4-depth-assets.md` |
-| `S04.1` | Extended manifest | `S02`, approved `S03` children | Medium | IN PROGRESS | `evidence/S04.1-manifest.md` |
-| `S04.2` | Repeatable verifier | `S04.1` | Medium | READY | `evidence/S04.2-verifier.md` |
-| `S04.3` | Import/orphan/reference guards | `S04.2` | Medium | READY | `evidence/S04.3-guards.md` |
-| `S05.1` | Priority/deferred loading behavior | `S04` | High | READY | `evidence/S05.1-loading.md` |
+| `S04.1` | Extended manifest | `S02`, approved `S03` children | Medium | VERIFIED | `evidence/S04.1-manifest.md` |
+| `S04.2` | Repeatable verifier | `S04.1` | Medium | VERIFIED | `evidence/S04.2-verifier.md` |
+| `S04.3` | Import/orphan/reference guards | `S04.2` | Medium | VERIFIED | `evidence/S04.3-guards.md` |
+| `S05.1` | Priority/deferred loading behavior | `S04` | High | IN PROGRESS | `evidence/S05.1-loading.md` |
 | `S05.2` | Responsive cinematic handoff | `S05.1` | High | READY | `evidence/S05.2-cinematic.md` |
 | `S05.3` | Approved component states in motion chapters | `S05.2` | High | READY | `evidence/S05.3-motion.md` |
 | `S05.4` | Reduced/static fallback parity | `S05.3` | High | READY | `evidence/S05.4-fallback.md` |
@@ -38,6 +38,6 @@ Statuses: `READY`, `IN PROGRESS`, `BLOCKED`, `VERIFIED`, `DEFERRED`.
 | `S01` | `S01.1`–`S01.3` verified | VERIFIED |
 | `S02` | `S02.1`–`S02.3` verified | VERIFIED |
 | `S03` | All required `S03.*` verified or explicitly deferred | VERIFIED |
-| `S04` | `S04.1`–`S04.3` verified | IN PROGRESS |
-| `S05` | `S05.1`–`S05.4` verified | READY |
+| `S04` | `S04.1`–`S04.3` verified | VERIFIED |
+| `S05` | `S05.1`–`S05.4` verified | IN PROGRESS |
 | `S06` | `S06.1`–`S06.3` verified | READY |
