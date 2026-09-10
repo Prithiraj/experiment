@@ -49,9 +49,9 @@ export function initBloomChapter(): () => void {
       .to(stateFull, { opacity: 1, scale: 1, duration: 0.04 }, 0.56)
       .to(ripple, { opacity: 0.58, scale: 1.04, duration: 0.42 }, 0.28)
       .to(copy, { y: -18, duration: 0.28 }, 0.28)
+      .to(stateFull, { opacity: 0, scale: 1.035, duration: 0.04 }, 0.62)
       .to(reflection, { opacity: 0, duration: 0.24 }, 0.66)
-      .to(open, { opacity: 1, scale: 1.025, duration: 0.28 }, 0.64)
-      .to(stateFull, { opacity: 0, scale: 1.045, duration: 0.18 }, 0.66)
+      .to(open, { opacity: 1, scale: 1.025, duration: 0.28 }, 0.66)
       .to(ripple, { opacity: 0, scale: 1.09, duration: 0.22 }, 0.7)
       .to(open, { scale: 1.055, duration: 0.22 }, 0.78);
   }, chapter);

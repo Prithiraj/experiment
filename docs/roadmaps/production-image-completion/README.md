@@ -54,7 +54,7 @@ S06 Verification and release
 
 ## Current checkpoint
 
-See [the tracker](./01-implementation-tracker.md) for the only authoritative slice status. The deterministic local release gates are verified; `S06.2` is the active browser-matrix slice.
+See [the tracker](./01-implementation-tracker.md) for the only authoritative slice status. Local gates and the nine-cell browser matrix are verified; `S06.3` is the active critical release slice.
 
 ## Files
 
